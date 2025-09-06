@@ -82,21 +82,63 @@ body {
   transform: rotate(20deg);
 }
 
-/* HERO */
+/* HERO base */
 .hero {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 4rem 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* DARK */
+  transition: background 0.8s ease-in-out;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
+/* Partículas */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
 }
-.hero p{
-    color: white;
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: #4db8ff;
+}
+
+/* HERO en Light Mode */
+body.light .hero {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5, #dcb0ff);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  color: #222;
+}
+
+body.light .hero-content h1 span {
+  color: #6a11cb;
+}
+
+/* Animación degradado */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* CONTENIDO */
 .container {
   max-width: 1200px;
