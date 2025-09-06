@@ -7,6 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">MBTech</span>
+      <a href="#">Novedades</a>
+      <a href="#">Funcionalidades</a>
+      <a href="#">Ayuda</a>
+    </div>
+
+    <div class="nav-right">
+      <input type="text" placeholder="Buscar...">
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </nav>
+
   <!-- Header de portada -->
   <header class="hero">
     <h1>What's New in Chrome</h1>
@@ -14,7 +29,6 @@
 
   <!-- Contenedor principal -->
   <main class="container">
-    <!-- Sección 1 -->
     <section class="card">
       <img src="img/tabs.png" alt="Tabs example">
       <div>
@@ -23,7 +37,6 @@
       </div>
     </section>
 
-    <!-- Sección 2 -->
     <section class="card">
       <img src="img/lens.png" alt="Google Lens">
       <div>
@@ -31,24 +44,23 @@
         <p>Drag, highlight or right-click to search instantly...</p>
       </div>
     </section>
-
-    <!-- Sección 3 -->
-    <section class="card">
-      <img src="img/password.png" alt="Password sharing">
-      <div>
-        <h2>Share passwords on your phone</h2>
-        <p>Easily share saved credentials with trusted contacts...</p>
-      </div>
-    </section>
-
-    <!-- Sección 4 -->
-    <section class="card">
-      <img src="img/toolbar.png" alt="Toolbar customization">
-      <div>
-        <h2>A new way to customize your toolbar</h2>
-        <p>Personalize your Chrome toolbar with shortcuts...</p>
-      </div>
-    </section>
   </main>
+
+  <!-- Script al final para que el botón ya exista -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light");
+
+      // Cambiar icono
+      if (body.classList.contains("light")) {
+        toggleBtn.textContent = "☀️";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+    });
+  </script>
 </body>
 </html>
