@@ -84,8 +84,11 @@ body {
 .hero h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  color: white;
 }
-
+.hero p{
+    color: white;
+}
 /* CONTENIDO */
 .container {
   max-width: 1200px;
