@@ -1,28 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's New in Chrome</title>
+  <title>MBTech - Innovación Tecnológica</title>
   <link rel="stylesheet" href="styles.css">
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4db8ff;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #4db8ff;
+}
+
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Botón Dark/Light */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+.hero p{
+    color: white;
+}
+/* CONTENIDO */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* LIGHT MODE */
+body.light {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+body.light .navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+body.light .navbar a {
+  color: #222;
+}
+
+body.light .card {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light .card p {
+  color: #555;
+}
+</style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
       <span class="logo">MBTech</span>
-      <a href="#">Novedades</a>
-      <a href="#">Funcionalidades</a>
-      <a href="#">Ayuda</a>
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Contacto</a>
     </div>
-
     <div class="nav-right">
       <input type="text" placeholder="Buscar...">
       <button id="theme-toggle">🌙</button>
     </div>
   </nav>
 
+  <!-- Hero con partículas -->
   <header class="hero">
+    <div id="particles-js"></div>
     <div class="hero-content">
       <h1>Bienvenido a <span>MBTech</span></h1>
       <p>Innovación, Desarrollo y Tecnología a tu alcance.</p>
@@ -30,41 +182,111 @@
     </div>
   </header>
 
-
-  <!-- Contenedor principal -->
-  <main class="container">
+  <!-- Contenido principal -->
+  <main class="container" id="servicios">
     <section class="card">
-      <img src="img/tabs.png" alt="Tabs example">
+      <img src="img/ai.png" alt="IA">
       <div>
-        <h2>Get your tab groups on the go</h2>
-        <p>Access and sync your saved tab groups on your phone...</p>
+        <h2>Inteligencia Artificial</h2>
+        <p>Soluciones inteligentes para optimizar procesos y mejorar la productividad.</p>
       </div>
     </section>
 
     <section class="card">
-      <img src="img/lens.png" alt="Google Lens">
+      <img src="img/cloud.png" alt="Cloud">
       <div>
-        <h2>Search anything on your screen with Google Lens in Chrome</h2>
-        <p>Drag, highlight or right-click to search instantly...</p>
+        <h2>Computación en la Nube</h2>
+        <p>Infraestructura segura y escalable para empresas modernas.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img src="img/dev.png" alt="Desarrollo">
+      <div>
+        <h2>Desarrollo de Software</h2>
+        <p>Aplicaciones a medida con las últimas tecnologías.</p>
       </div>
     </section>
   </main>
 
-  <!-- Script al final para que el botón ya exista -->
-  <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    const body = document.body;
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js"></script>
+<script>const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
 
-    toggleBtn.addEventListener("click", () => {
-      body.classList.toggle("light");
+// Configuración partículas por tema
+const particlesDark = {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#4db8ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#4db8ff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { enable: true, speed: 3 }
+  },
+  interactivity: {
+    events: { onhover: { enable: true, mode: "repulse" } },
+    modes: { repulse: { distance: 100 } }
+  },
+  retina_detect: true
+};
 
-      // Cambiar icono
-      if (body.classList.contains("light")) {
-        toggleBtn.textContent = "☀️";
-      } else {
-        toggleBtn.textContent = "🌙";
-      }
-    });
-  </script>
+const particlesLight = {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#6a11cb" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#6a11cb",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { enable: true, speed: 3 }
+  },
+  interactivity: {
+    events: { onhover: { enable: true, mode: "repulse" } },
+    modes: { repulse: { distance: 100 } }
+  },
+  retina_detect: true
+};
+
+// Función para recargar partículas
+function loadParticles(config) {
+  // Si ya existe un canvas, lo borro
+  if (window.pJSDom && window.pJSDom.length > 0) {
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window.pJSDom = [];
+  }
+  particlesJS("particles-js", config);
+}
+
+// Inicial: dark mode
+loadParticles(particlesDark);
+
+// Toggle tema + partículas
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("light");
+
+  if (body.classList.contains("light")) {
+    toggleBtn.textContent = "☀️";
+    loadParticles(particlesLight);
+  } else {
+    toggleBtn.textContent = "🌙";
+    loadParticles(particlesDark);
+  }
+});
+</script>
 </body>
 </html>
