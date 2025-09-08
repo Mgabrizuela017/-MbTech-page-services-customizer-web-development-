@@ -4,206 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MBTech - Innovación Tecnológica</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Assets/styles.css">
+
 <style>
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1e1e1e;
-  color: #ffffff;
-  transition: background 0.3s, color 0.3s;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 1.5rem;
-  background-color: #2a2a2a;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .nav-left {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #4db8ff;
-}
-
-.navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.navbar a:hover {
-  color: #4db8ff;
-}
-
-.navbar .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.navbar input {
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-/* Botón Dark/Light */
-#theme-toggle {
-  background: transparent;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-#theme-toggle:hover {
-  transform: rotate(20deg);
-}
-
-/* HERO base */
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* DARK */
-  transition: background 0.8s ease-in-out;
-}
-
-/* Partículas */
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content h1 span {
-  color: #4db8ff;
-}
-
-/* HERO en Light Mode */
-body.light .hero {
-  background: linear-gradient(135deg, #74ebd5, #ACB6E5, #dcb0ff);
-  background-size: 300% 300%;
-  animation: gradientShift 12s ease infinite;
-  color: #222;
-}
-
-body.light .hero-content h1 span {
-  color: #6a11cb;
-}
-
-/* Animación degradado */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* CONTENIDO */
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
-  display: grid;
-  gap: 2rem;
-}
-
-.card {
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  padding: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.card img {
-  width: 150px;
-  border-radius: 8px;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #cccccc;
-}
-
-/* LIGHT MODE */
-body.light {
-  background-color: #f9f9f9;
-  color: #222;
-}
-
-body.light .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-body.light .navbar a {
-  color: #222;
-}
-
-body.light .card {
-  background-color: #ffffff;
-  color: #333;
-}
-
-body.light .card p {
-  color: #555;
-}
-.Logo{ 
-  display: block;
-  margin: 2rem auto; /* auto lo centra horizontalmente */
-  margin-top: -55px;
-  position: relative;
-  
-}
 </style>
+
 </head>
 <body>
   <!-- Navbar -->
@@ -233,33 +38,94 @@ body.light .card p {
 
    <img  class="Logo" src="Assets/Mbtech logo blue circle.png.jpg"   width="10%" style="border-radius: 100px;">
 
+
   <!-- Contenido principal -->
   <main class="container" id="servicios">
-    <section class="card">
-      <img src="img/ai.png" alt="IA">
-      <div>
+
+
+
+   <!--<section class="card">
+      <div class="card-text">
         <h2>Inteligencia Artificial</h2>
         <p>Soluciones inteligentes para optimizar procesos y mejorar la productividad.</p>
       </div>
-    </section>
+      <div class="card-img">
+        <img src="img/ai.png" alt="IA">
+      </div>
+    </section>--> 
 
-    <section class="card">
-      <img src="img/cloud.png" alt="Cloud">
-      <div>
-        <h2>Computación en la Nube</h2>
-        <p>Infraestructura segura y escalable para empresas modernas.</p>
+ <section class="card">
+      <div class="card-text">
+        <h2>Sistemas de gestion "CMR"</h2>
+        <p>Un sistema CRM (Customer Relationship Management o Gestión de Relaciones con Clientes) es un software que integra todas las interacciones y datos de una empresa con sus clientes para mejorar la comunicación, optimizar el proceso de ventas, brindar un servicio más personalizado y aumentar la satisfacción y la retención de los clientes. Estas herramientas organizan información de clientes, automatizan procesos, generan análisis y proporcionan un espacio centralizado para los equipos de ventas, marketing y atención al cliente. </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/LA-VISIOCONFERENCE-3.jpg" alt="CMR">
       </div>
     </section>
 
     <section class="card">
-      <img src="img/dev.png" alt="Desarrollo">
-      <div>
+      <div class="card-text">
+        <h2>Computación en la Nube</h2>
+        <p>Infraestructura segura y escalable para empresas modernas.
+        entrega de recursos informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis y más a través de Internet, generalmente bajo un modelo de pago por consumo.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/01cloud.png" alt="Cloud">
+      </div>
+    </section>
+
+    <!--<section class="card">
+      <div class="card-text">
         <h2>Desarrollo de Software</h2>
         <p>Aplicaciones a medida con las últimas tecnologías.</p>
       </div>
+      <div class="card-img">
+        <img src="img/dev.png" alt="Desarrollo">
+      </div>
+    </section>-->
+ 
+<section class="card">
+      <div class="card-text">
+        <h2>Desarrollo Web</h2>
+        <p>El desarrollo web es el proceso de crear y mantener sitios y aplicaciones web, abarcando desde el diseño visual (front end) hasta la funcionalidad y lógica interna (back end). Se utiliza lenguajes de programación como HTML, CSS y JavaScript herramientas para dar forma a la interfaz con la que interactúan los usuarios, mientras que el back end maneja la base de datos y la lógica del sistema, asegurando que la web sea funcional, segura y eficiente. </p>
+      </div>
+      <div class="card-img">
+        <img class="web-desing" src="Assets/img/desarrollo-web.png" alt="Desarrollo">
+      </div>
     </section>
-  </main>
 
+  </main>
+ <footer>
+
+    <!-- Parte superior -->
+    <div class="footer-top">
+      <span>Follow us</span>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Parte inferior -->
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="#">Google</a>
+        <a href="#">Privacy and Terms</a>
+        <a href="#">About Google</a>
+        <a href="#">Google Products</a>
+      </div>
+      <div class="language">English - United States</div>
+    </div>
+  </footer>
+
+</body>
+</html>
+  <!-- Iconos de redes (puedes usar fontawesome) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="script.js"></script>
