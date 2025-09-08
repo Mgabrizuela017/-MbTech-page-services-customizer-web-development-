@@ -318,3 +318,70 @@ body.light .card p {
     .language:hover {
       color: #ffffff;
     }
+
+.features-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .features-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: #2a2a2a;
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .feature-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      flex-grow: 1;
+    }
+
+    .feature-card button {
+      background: #3b82f6;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      color: white;
+      align-self: flex-end;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .feature-card button:hover {
+      background: #2563eb;
+    }
