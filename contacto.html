@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título SEO -->
   <title>MBTech - Innovación Tecnológica</title>
+
+  <!-- Descripción para SEO -->
+  <meta name="description" content="MBTech ofrece soluciones tecnológicas innovadoras en desarrollo web, soporte IT y transformación digital para empresas y emprendedores.">
+
+  <!-- Palabras clave (no siempre tienen mucho peso en SEO, pero pueden ayudar) -->
+  <meta name="keywords" content="tecnología, innovación, servicios IT, desarrollo web, soporte técnico, transformación digital, MBTech">
+
+  <!-- Autor -->
+  <meta name="author" content="MBTech">
+
+  <!-- Control de indexación en buscadores -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Idioma principal -->
+  <meta http-equiv="content-language" content="es">
+
+  <!-- Open Graph para redes sociales (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="MBTech - Innovación Tecnológica">
+  <meta property="og:description" content="Soluciones tecnológicas para empresas: desarrollo web, soporte IT y transformación digital.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tu-dominio.com">
+  <meta property="og:image" content="https://www.tu-dominio.com/Assets/og-image.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MBTech - Innovación Tecnológica">
+  <meta name="twitter:description" content="Servicios tecnológicos innovadores: desarrollo web, soporte IT y más.">
+  <meta name="twitter:image" content="https://www.tu-dominio.com/Assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+
+  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="Assets/styles.css">
+</head>
 
 <style>
     
@@ -90,6 +126,116 @@
       text-decoration: underline;
     }
 
+
+.social-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: rgb(2, 154, 255);
+  border-radius: 80%;
+}
+#social-icon-youtube:hover{
+  background: rgb(255, 0, 0);
+}
+
+/* Tema Claro (por defecto) */
+body.light-mode {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Tema Oscuro (violetita) */
+body.dark-mode {
+  background-color: #252525;/* violeta oscuro */
+  color: #f1e6ff;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Ajuste navbar */
+.navbar {
+  padding: 10px 20px;
+}
+body.light-mode .navbar {
+  background:  #6b11cbbd;
+}
+body.dark-mode .navbar {
+  background: #252525;
+}
+
+/* Botón de toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* FORMULARIO EN LIGHT MODE */
+body.light-mode .contact-form {
+  background-color:  #6b11cbbd;
+  color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  border-bottom: 2px solid #1a1a1a;
+  color: #1a1a1a;
+}
+body.light-mode .contact-form button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+/* FORMULARIO EN DARK MODE */
+body.dark-mode .contact-form {
+  background-color: #252525; /* violeta oscuro */
+  color: #f1e6ff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.692);
+    
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  border-bottom: 2px solid #f1e6ff;
+  color: #f1e6ff;
+}
+body.dark-mode .contact-form button {
+  background: linear-gradient(to right, #000000, #6a11cb);
+  color: #fff;
+}
+
+/* FOOTER en LIGHT MODE */
+body.light-mode .site-footer {
+  background:  #6b11cbbd;
+  color: #1a1a1a;
+}
+body.light-mode .site-footer a {
+  color: #313131;
+  transition: color 0.3s;  
+   font-weight: bold;  
+}
+body.light-mode .site-footer a:hover {
+  text-decoration: underline;
+  color: #313131;
+ 
+}
+
+/* FOOTER en DARK MODE */
+body.dark-mode .site-footer {
+  background:#252525 ; /* violeta oscuro #3a005a */
+  color: #f1e6ff;
+}
+body.dark-mode .site-footer a {
+  color: #cfc7c7;
+}
+body.dark-mode .site-footer a:hover {
+  text-decoration: none;
+  color: #ffe3ff;
+}
+
 </style>
 
 </head>
@@ -158,8 +304,8 @@
             dev.brizuela07@gmail.com
         </a></p><span><br></span>
       <p><a href="https://wa.me/5491126027687" target="_blank">Tel: 1126027687 /</a></p>
-      <p><a href="https://wa.me/5491136283952" target="_blank">Tel: 1136283952 </a></p>
-      <p><a href="https://wa.me/5491157319294" target="_blank">Tel: 1157319294 </a></p>
+      <p><a href="https://wa.me/5491166227717" target="_blank">Tel: 1166227717 </a></p>
+      <p><a href="https://wa.me/5491162068822" target="_blank">Tel: 1162068822 </a></p>
       
       <img src="Assets/Icons/logo_mbtech_transparente.png" alt="Logotipo" width="170Px" style="border-radius: 100px;">
     </div>
@@ -170,13 +316,6 @@
 <img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
 </div>
 
-    <!-- Parte superior 
-   <div class="social-icons">
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>-->
-<!-- HTML: footer con logos sociales -->
 <footer class="site-footer">
   <!-- Parte superior -->
   <div class="footer-top">
@@ -192,15 +331,15 @@
       </a>
       
       <a href="https://www.youtube.com/tu-canal" target="_blank" rel="noopener noreferrer">
-        <img src="Assets/Icons/youtube.svg" alt="YouTube" class="social-icon">
+        <img src="Assets/Icons/youtube.svg" alt="YouTube" class="social-icon" id="social-icon-youtube">
       </a>     
        <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
         <img src="Assets/Icons/facebook.svg" alt="Facebook" class="social-icon">
       </a>
           <!--  <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
         <img src="Assets/Icons/x-logo.svg" alt="X / Twitter" class="social-icon">-->
-      <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
-      <img src="Assets/Icons/mandalaig.png" alt="Instagram" class="social-icon">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+      <img src="Assets/Icons/mandalaig.png" alt="Instagram" class="social-icon" id="social-icon-ig">
 
 
      <!-- <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
@@ -213,18 +352,77 @@
   <div class="footer-bottom">
     <div class="footer-links">
       <a href="https://github.com/Mgabrizuela017">Gi-hub</a>      
-      <a href="Assets/Terminos_y_Privacidad_Profesiona MBTECHl.pdf">Términos y privacidad</a>
+      <a href="Assets/Terminos_y_Privacidad_Profesiona MBTECHl.pdf" target="_blank">Términos y privacidad</a>
       <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
       <a href="#">Productos MBT</a>
     </div>
-    <div class="language">Español - Argentina</div>
+    <div class="language">
+    <label for="language-select">Idioma:</label>
+    <select id="language-select">
+    <option value="es-AR" selected>Español - Argentina</option>
+    <option value="es-ES">Español - España</option>
+    <option value="en-US">English - US</option>
+    <option value="pt-BR">Português - Brasil</option>
+    <option value="fr-FR">Français - France</option>
+  </select>
+</div>
   </div>
 </footer>
+<script>
+document.getElementById("language-select").addEventListener("change", function() {
+  const idioma = this.value;
+
+  // Redirecciones según idioma
+  switch (idioma) {
+    case "es-AR":
+      window.location.href = "index.html"; // Español Argentina
+      break;
+    case "es-ES":
+      window.location.href = "es/index.html"; // Español España
+      break;
+    case "en-US":
+      window.location.href = "en/index.html"; // Inglés
+      break;
+    case "pt-BR":
+      window.location.href = "pt/index.html"; // Portugués
+      break;
+    case "fr-FR":
+      window.location.href = "fr/index.html"; // Francés
+      break;
+  }
+});
+</script>
 
   <!-- Iconos de redes (puedes usar fontawesome) -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   <!-- Scripts -->
 
   <script src="script.js"></script>
-<script>const toggleBtn = document.getElementById("theme-toggle");
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
+
+// Si ya había un modo guardado en localStorage, lo aplicamos
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.textContent = "☀️";
+} else {
+  body.classList.add("light-mode");
+  toggleBtn.textContent = "🌙";
+}
+
+// Evento al hacer click en el botón
+toggleBtn.addEventListener("click", () => {
+  if (body.classList.contains("light-mode")) {
+    body.classList.replace("light-mode", "dark-mode");
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.replace("dark-mode", "light-mode");
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
+});
+</script>
+</body>
+</html>
