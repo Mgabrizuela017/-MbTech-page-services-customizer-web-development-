@@ -578,6 +578,14 @@ body.light #theme-toggle {
 .social-icon:hover {
   opacity: 0.8;
   transform: scale(1.1);
+  background-color: rgb(2, 154, 255);
+  border-radius: 80%;
+}
+#social-icon-youtube:hover{
+  background: rgb(255, 0, 0);
+}
+#social-icon-ig:hover{
+    background-color: violet;
 }
 
 /* Parte inferior con links */

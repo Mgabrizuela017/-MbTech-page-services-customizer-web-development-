@@ -7,6 +7,89 @@
   <link rel="stylesheet" href="Assets/styles.css">
 
 <style>
+    
+  .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 20px;
+      flex: 1;
+        transition: transform 0.8s ease, box-shadow 1s ease;
+          
+      grid-template-columns: 1fr 1frs;
+      align-items: center;
+      gap: 30px;
+    }
+    .contact-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .contact-form, .contact-info {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      background-color: #2d2e31;;
+      color: #ffffff;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 3px black;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      background: transparent;
+      font-size: 1em;
+      color: inherit;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #000000, #0460c2);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .contact-info {
+      text-align: left;
+      font-size: 1.1rem;
+      margin-top: 50px;
+    }
+
+    .contact-info a {
+      color:  #0ba6ff;
+      text-decoration: none;
+      background-color: #ffffff20;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
 </style>
 
 </head>
@@ -16,8 +99,8 @@
     <div class="nav-left">
       <span class="logo">MBTech</span>
       <a href="index.html">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
+      <a href="index.html">Servicios</a>
+      <a href="index.html">Proyectos</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="nav-right">
@@ -28,5 +111,120 @@
 </div>
   
   </div>
-
   </nav>
+<header class="hero">
+  <div id="particles-js"></div>
+  <div class="hero-content_acerca_de">
+    <video autoplay muted loop playsinline>
+      <source src="Assets/img/Background technology world loop - Background Marketing (1080p, h264).mp4" type="video/mp4">
+      Tu navegador no soporta video en HTML5.
+    </video>
+  </div>
+</header>
+
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Contáctenos</h2>
+
+
+      <form action="#" method="post">
+        <label for="fullName">Nombre completo*</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Comercio">Negocio*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje*</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <strong><button type="submit">ENVIAR</button></strong>
+      </form>
+    </div>
+<br>
+
+    <div class="contact-info">
+      <h3>Contacto:</h3>
+      <br>
+      <p><strong>Supervisor:</strong> Marcos gabriel Brizuela</p>
+      <p><strong>Administrativa:</strong> Majo Pacheco</p> 
+      <p><strong>Responsable de cuentas:</strong> Candela Brizuela </p>
+      <br>
+      <p>Mbtech Soluciones digitales</p>
+      <p>Email: 
+        <a href="dev.brizuela07@gmail.com" target="_blank">
+            dev.brizuela07@gmail.com
+        </a></p><span><br></span>
+      <p><a href="https://wa.me/5491126027687" target="_blank">Tel: 1126027687 /</a></p>
+      <p><a href="https://wa.me/5491136283952" target="_blank">Tel: 1136283952 </a></p>
+      <p><a href="https://wa.me/5491157319294" target="_blank">Tel: 1157319294 </a></p>
+      
+      <img src="Assets/Icons/logo_mbtech_transparente.png" alt="Logotipo" width="170Px" style="border-radius: 100px;">
+    </div>
+  </section>
+
+<div class="whatsapp-container">
+  <a href="https://wa.me/5491126027687" target="_blank">
+<img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
+</div>
+
+    <!-- Parte superior 
+   <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>-->
+<!-- HTML: footer con logos sociales -->
+<footer class="site-footer">
+  <!-- Parte superior -->
+  <div class="footer-top">
+    <div class="social-icons">
+      <span>Sígueme:</span>
+        
+      <a href="https://github.com/Mgabrizuela017" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/icono_github.gif" alt="Git-hub / git_hub" style="border-radius: 100px;" class="social-icon">
+      </a>
+
+      <a href="https://www.linkedin.com/in/marcos-brizuela07/" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      
+      <a href="https://www.youtube.com/tu-canal" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/youtube.svg" alt="YouTube" class="social-icon">
+      </a>     
+       <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/facebook.svg" alt="Facebook" class="social-icon">
+      </a>
+          <!--  <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/x-logo.svg" alt="X / Twitter" class="social-icon">-->
+      <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+      <img src="Assets/Icons/mandalaig.png" alt="Instagram" class="social-icon">
+
+
+     <!-- <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/tiktok.svg" alt="TikTok" class="social-icon">-->
+      </a>
+    </div>
+  </div>
+
+  <!-- Parte inferior -->
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="https://github.com/Mgabrizuela017">Gi-hub</a>      
+      <a href="Assets/Terminos_y_Privacidad_Profesiona MBTECHl.pdf">Términos y privacidad</a>
+      <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
+      <a href="#">Productos MBT</a>
+    </div>
+    <div class="language">Español - Argentina</div>
+  </div>
+</footer>
+
+  <!-- Iconos de redes (puedes usar fontawesome) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+
+  <script src="script.js"></script>
+<script>const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
