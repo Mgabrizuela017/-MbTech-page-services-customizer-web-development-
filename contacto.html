@@ -235,6 +235,22 @@ body.dark-mode .site-footer a:hover {
   text-decoration: none;
   color: #ffe3ff;
 }
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video cubra todo el área sin deformarse */
+
+}
 
 </style>
 
@@ -262,7 +278,7 @@ body.dark-mode .site-footer a:hover {
   <div id="particles-js"></div>
   <div class="hero-content_acerca_de">
     <video autoplay muted loop playsinline>
-      <source src="Assets/img/Diseño sin título.mp4" type="video/mp4">
+      <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
       Tu navegador no soporta video en HTML5.
     </video>
   </div>
