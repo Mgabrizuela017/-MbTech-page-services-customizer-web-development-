@@ -252,6 +252,118 @@ body.dark-mode .site-footer a:hover {
 
 }
 
+/* ---------------------- */
+/* ESTILOS RESPONSIVOS 📱 */
+/* ---------------------- */
+
+/* Dispositivos pequeños (móviles en vertical, hasta 768px) */
+@media (max-width: 768px) {
+  
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-left a {
+    padding: 8px 0;
+    display: block;
+  }
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  /* Hero (video) */
+  .hero {
+    height: 60vh; /* no ocupa toda la pantalla en móviles */
+  }
+  .hero video {
+    object-fit: cover;
+  }
+
+  /* Sección de contacto */
+  .contact-section {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .contact-form, .contact-info {
+    max-width: 100%;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info img {
+    margin: 15px auto;
+    display: block;
+  }
+
+  /* Formulario */
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Footer */
+  .footer-top {
+    text-align: center;
+  }
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Extra pequeño (móviles < 480px) */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+  .contact-form h2 {
+    font-size: 1.2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.85rem;
+  }
+  .contact-form button {
+    font-size: 0.85rem;
+  }
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .whatsapp-container img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 </style>
 
 </head>

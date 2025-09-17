@@ -622,3 +622,159 @@ body.light #theme-toggle {
   color: #ffffff;
 }
 
+/* ---------------------- */
+/* ESTILOS RESPONSIVOS 📱 */
+/* ---------------------- */
+
+/* Tablets y móviles medianos (máx. 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 70vh;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .btn-cotizacion {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Móviles pequeños (máx. 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-left a {
+    display: block;
+    padding: 10px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-cotizacion {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .Logo {
+    width: 25% !important;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    text-align: center;
+    padding: 15px;
+  }
+  .feature-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-top {
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Móviles muy pequeños (máx. 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh;
+    padding: 20px 10px;
+  }
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .Logo {
+    width: 40% !important;
+  }
+
+  .card-text h2 {
+    font-size: 1.2rem;
+  }
+  .card-text p {
+    font-size: 0.85rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+  .whatsapp-container img {
+    width: 55px;
+    height: 55px;
+  }
+}
