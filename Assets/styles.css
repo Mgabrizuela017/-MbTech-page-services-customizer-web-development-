@@ -621,7 +621,6 @@ body.light #theme-toggle {
 .language:hover {
   color: #ffffff;
 }
-
 /* ---------------------- */
 /* ESTILOS RESPONSIVOS 📱 */
 /* ---------------------- */
@@ -776,6 +775,39 @@ body.light #theme-toggle {
   .whatsapp-container img {
     width: 55px;
     height: 55px;
-    margin-left: 30px;
+  }
+}
+
+/* --- FIX imágenes tarjetas y WhatsApp --- */
+
+/* Imágenes de las tarjetas */
+.card-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* evita deformación */
+}
+
+/* WhatsApp flotante */
+.whatsapp-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.whatsapp-container img {
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* Ajuste extra para móviles muy pequeños */
+@media (max-width: 480px) {
+  .whatsapp-container img {
+    width: 40px;
+    height: 40px;
   }
 }
