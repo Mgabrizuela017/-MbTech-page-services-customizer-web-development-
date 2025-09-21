@@ -388,13 +388,61 @@ body.dark-mode .site-footer a:hover {
   </nav>
 <header class="hero">
   <div id="particles-js"></div>
-  <div class="hero-content_acerca_de">
-    <video autoplay muted loop playsinline>
-      <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
-      Tu navegador no soporta video en HTML5.
-    </video>
+  <div class="hero-content">
+    <h1>Dejanos tu consulta <span>MBTech</span></h1>
+    <p class="slogan">El momento de evolucionar es ahora: lleva tu empresa al siguiente nivel con innovación real.</p>
+    <p class="slogan">No esperes más: impulsa tu negocio hoy con la tecnología que transforma resultados.</p>
+    <p class="slogan">Haz que cada decisión cuente: potencia tu organización con soluciones inteligentes ahora.</p>
+   <!-- <p class="slogan">No dejes que tu competencia te adelante: descubre cómo nuestra tecnología acelera tu éxito.</p>-->
+    <p class="slogan">Convierte oportunidades en resultados hoy, con herramientas que hacen tu negocio imparable.</p>
   </div>
+  <video autoplay muted loop playsinline>
+    <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
 </header>
+<style>.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.slogan {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+  font-size: 1.6rem;
+  line-height: 1.8rem;   /* más espacio entre líneas */
+  margin: 2.5rem 0;      /* separación mayor entre slogans */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* legibilidad sobre video */
+}
+
+.slogan.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* aparición suave + zoom */
+}
+
+</style>
+<script>
+  const slogans = document.querySelectorAll('.slogan');
+  let delay = 0;
+
+  slogans.forEach((slogan) => {
+    setTimeout(() => {
+      slogan.classList.add('visible');
+    }, delay);
+    delay += 4000; // 4 segundos entre cada slogan
+  });
+</script>
 
   <section class="contact-section">
     <div class="contact-form">
@@ -423,7 +471,7 @@ body.dark-mode .site-footer a:hover {
       <h3>Contacto:</h3>
       <br>
       <p><strong>Supervisor:</strong> Marcos gabriel Brizuela</p>
-      <p><strong>Administrativa:</strong> Majo Pacheco</p> 
+      <!--<p><strong>Administrativa:</strong> Majo Pacheco</p>--> 
       <p><strong>Responsable de cuentas:</strong> Candela Brizuela </p>
       <br>
       <p>Mbtech Soluciones digitales</p>
@@ -432,7 +480,7 @@ body.dark-mode .site-footer a:hover {
             dev.brizuela07@gmail.com
         </a></p><span><br></span>
       <p><a href="https://wa.me/5491126027687" target="_blank">Tel: 1126027687 /</a></p>
-      <p><a href="https://wa.me/5491166227717" target="_blank">Tel: 1166227717 </a></p>
+      <!--<p><a href="https://wa.me/5491166227717" target="_blank">Tel: 1166227717 </a></p>-->
       <p><a href="https://wa.me/5491162068822" target="_blank">Tel: 1162068822 </a></p>
       
       <img src="Assets/Icons/logo_mbtech_transparente.png" alt="Logotipo" width="170Px" style="border-radius: 100px;">
@@ -485,18 +533,18 @@ body.dark-mode .site-footer a:hover {
       <a href="#">Productos MBT</a>
     </div>
     <div class="language">
-    <label for="language-select">Idioma:</label>
-    <select id="language-select">
+    <label for="language-select">Español - Argentina:</label>
+   <!--<select id="language-select">
     <option value="es-AR" selected>Español - Argentina</option>
     <option value="es-ES">Español - España</option>
     <option value="en-US">English - US</option>
     <option value="pt-BR">Português - Brasil</option>
     <option value="fr-FR">Français - France</option>
-  </select>
+  </select>--> 
 </div>
   </div>
 </footer>
-<script>
+<!--<script>
 document.getElementById("language-select").addEventListener("change", function() {
   const idioma = this.value;
 
@@ -519,7 +567,7 @@ document.getElementById("language-select").addEventListener("change", function()
       break;
   }
 });
-</script>
+</script>-->
 
   <!-- Iconos de redes (puedes usar fontawesome) -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
