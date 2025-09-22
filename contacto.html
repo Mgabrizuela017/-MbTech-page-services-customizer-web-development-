@@ -456,8 +456,9 @@ body.dark-mode .site-footer a:hover {
         <label for="email">Email*</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="Comercio">Negocio*</label>
-        <input type="email" id="email" name="email" required>
+       <label for="comercio">Negocio*</label>
+        <input type="text" id="comercio" name="comercio" required>
+
 
         <label for="message">Mensaje*</label>
         <textarea id="message" name="message" rows="4" required></textarea>
@@ -466,6 +467,54 @@ body.dark-mode .site-footer a:hover {
       </form>
     </div>
 <br>
+<script>
+  // Obtener el formulario
+  const form = document.querySelector('.contact-form form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío por defecto
+
+    // Obtener valores
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const comercio = document.getElementById('comercio').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    let errores = [];
+
+    // Validar nombre
+    if (fullName === '') {
+      errores.push('Por favor ingrese su nombre completo.');
+    }
+
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '') {
+      errores.push('Por favor ingrese su email.');
+    } else if (!emailRegex.test(email)) {
+      errores.push('Ingrese un email válido.');
+    }
+
+    // Validar comercio
+    if (comercio === '') {
+      errores.push('Por favor ingrese el nombre de su negocio.');
+    }
+
+    // Validar mensaje
+    if (message === '') {
+      errores.push('Por favor ingrese un mensaje.');
+    }
+
+    // Mostrar errores o enviar
+    if (errores.length > 0) {
+      alert(errores.join('\n'));
+    } else {
+      alert('Formulario enviado correctamente!');
+      form.reset(); // Limpiar el formulario
+      // Aquí puedes agregar el envío real por AJAX si quieres
+    }
+  });
+</script>
 
     <div class="contact-info">
       <h3>Contacto:</h3>
