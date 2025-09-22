@@ -364,6 +364,10 @@ body.dark-mode .site-footer a:hover {
   }
 }
 
+#toast {
+  transition: all 0.5s ease;
+}
+
 </style>
 
 </head>
@@ -467,53 +471,64 @@ body.dark-mode .site-footer a:hover {
       </form>
     </div>
 <br>
+<!-- Mensaje tipo toast -->
+<div id="toast" style="
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0460c2;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+">
+  ¡Formulario enviado exitosamente!
+</div>
+
 <script>
-  // Obtener el formulario
-  const form = document.querySelector('.contact-form form');
+const form = document.querySelector('.contact-form form');
+const toast = document.getElementById('toast');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío por defecto
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    // Obtener valores
-    const fullName = document.getElementById('fullName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const comercio = document.getElementById('comercio').value.trim();
-    const message = document.getElementById('message').value.trim();
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const comercio = document.getElementById('comercio').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-    let errores = [];
+  let errores = [];
 
-    // Validar nombre
-    if (fullName === '') {
-      errores.push('Por favor ingrese su nombre completo.');
-    }
+  if (fullName === '') errores.push('Por favor ingrese su nombre completo.');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email === '') errores.push('Por favor ingrese su email.');
+  else if (!emailRegex.test(email)) errores.push('Ingrese un email válido.');
+  if (comercio === '') errores.push('Por favor ingrese el nombre de su negocio.');
+  if (message === '') errores.push('Por favor ingrese un mensaje.');
 
-    // Validar email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '') {
-      errores.push('Por favor ingrese su email.');
-    } else if (!emailRegex.test(email)) {
-      errores.push('Ingrese un email válido.');
-    }
+  if (errores.length > 0) {
+    alert(errores.join('\n')); // Puedes reemplazar alert por un toast de error más adelante
+  } else {
+    form.reset();
 
-    // Validar comercio
-    if (comercio === '') {
-      errores.push('Por favor ingrese el nombre de su negocio.');
-    }
+    // Mostrar toast
+    toast.style.opacity = 1;
+    toast.style.transform = 'translateX(-50%) translateY(0)';
 
-    // Validar mensaje
-    if (message === '') {
-      errores.push('Por favor ingrese un mensaje.');
-    }
+    // Ocultar después de 3 segundos
+    setTimeout(() => {
+      toast.style.opacity = 0;
+      toast.style.transform = 'translateX(-50%) translateY(50px)';
+    }, 3000);
+  }
+});
+</script>
 
-    // Mostrar errores o enviar
-    if (errores.length > 0) {
-      alert(errores.join('\n'));
-    } else {
-      alert('Formulario enviado correctamente!');
-      form.reset(); // Limpiar el formulario
-      // Aquí puedes agregar el envío real por AJAX si quieres
-    }
-  });
 </script>
 
     <div class="contact-info">
