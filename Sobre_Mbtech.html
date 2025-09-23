@@ -279,7 +279,14 @@ body.dark-mode .site-footer a:hover {
     margin-top: 10px;
   }
 
-  /* Corrección de video en móviles */
+  /* Hero (video) */
+  .hero {
+    height: 60vh; /* no ocupa toda la pantalla en móviles */
+  }
+  .hero video {
+    object-fit: cover;
+  }
+/* Corrección de video en móviles */
 @media (max-width: 768px) {
   .hero {
     height: auto; /* deja que el contenido determine la altura */
@@ -293,12 +300,6 @@ body.dark-mode .site-footer a:hover {
     object-fit: cover;  /* mantiene recorte bonito */
   }
 }
-@media (max-width: 480px) {
-  .hero video {
-    max-height: 50vh;
-  }
-}
-
 
   /* Sección de contacto */
   .contact-section {
@@ -767,13 +768,3 @@ toggleBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLeft = document.querySelector(".nav-left");
-  const navRight = document.querySelector(".nav-right");
-
-  hamburger.addEventListener("click", () => {
-    navLeft.classList.toggle("active");
-    navRight.classList.toggle("active");
-  });
-</script>
