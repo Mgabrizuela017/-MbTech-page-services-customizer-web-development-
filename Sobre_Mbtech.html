@@ -279,13 +279,26 @@ body.dark-mode .site-footer a:hover {
     margin-top: 10px;
   }
 
-  /* Hero (video) */
+  /* Corrección de video en móviles */
+@media (max-width: 768px) {
   .hero {
-    height: 60vh; /* no ocupa toda la pantalla en móviles */
+    height: auto; /* deja que el contenido determine la altura */
+    min-height: 60vh; /* asegura que se vea decente */
   }
+
   .hero video {
-    object-fit: cover;
+    width: 100%;
+    height: auto;       /* mantiene proporción */
+    max-height: 60vh;   /* evita que se desborde */
+    object-fit: cover;  /* mantiene recorte bonito */
   }
+}
+@media (max-width: 480px) {
+  .hero video {
+    max-height: 50vh;
+  }
+}
+
 
   /* Sección de contacto */
   .contact-section {
