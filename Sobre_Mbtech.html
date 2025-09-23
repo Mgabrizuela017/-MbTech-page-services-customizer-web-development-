@@ -3,14 +3,373 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título SEO -->
   <title>MBTech - Innovación Tecnológica</title>
+
+  <!-- Descripción para SEO -->
+  <meta name="description" content="MBTech ofrece soluciones tecnológicas innovadoras en desarrollo web, soporte IT y transformación digital para empresas y emprendedores.">
+
+  <!-- Palabras clave (no siempre tienen mucho peso en SEO, pero pueden ayudar) -->
+  <meta name="keywords" content="tecnología, innovación, servicios IT, desarrollo web, soporte técnico, transformación digital, MBTech">
+
+  <!-- Autor -->
+  <meta name="author" content="MBTech">
+
+  <!-- Control de indexación en buscadores -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Idioma principal -->
+  <meta http-equiv="content-language" content="es">
+
+  <!-- Open Graph para redes sociales (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="MBTech - Innovación Tecnológica">
+  <meta property="og:description" content="Soluciones tecnológicas para empresas: desarrollo web, soporte IT y transformación digital.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tu-dominio.com">
+  <meta property="og:image" content="https://www.tu-dominio.com/Assets/og-image.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MBTech - Innovación Tecnológica">
+  <meta name="twitter:description" content="Servicios tecnológicos innovadores: desarrollo web, soporte IT y más.">
+  <meta name="twitter:image" content="https://www.tu-dominio.com/Assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+
+  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="Assets/styles.css">
+  <link rel="icon" href="Assets/Icons/MBTECH TRANSPARENTE HEADER.png" type="image/png">
+
+</head>
 
 <style>
-.hero-content_acerca_de img{
-        margin-top: 300px;
-        
+    
+  .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 20px;
+      flex: 1;
+        transition: transform 0.8s ease, box-shadow 1s ease;
+          
+      grid-template-columns: 1fr 1frs;
+      align-items: center;
+      gap: 30px;
+    }
+    .contact-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .contact-form, .contact-info {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      background-color: #2d2e31;;
+      color: #ffffff;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 3px black;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      background: transparent;
+      font-size: 1em;
+      color: inherit;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #000000, #0460c2);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .contact-info {
+      text-align: left;
+      font-size: 1.1rem;
+      margin-top: 50px;
+    }
+
+    .contact-info a {
+      color:  #0ba6ff;
+      text-decoration: none;
+      background-color: #ffffff20;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+
+.social-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: rgb(2, 154, 255);
+  border-radius: 80%;
 }
+#social-icon-youtube:hover{
+  background: rgb(255, 0, 0);
+}
+
+/* Tema Claro (por defecto) */
+body.light-mode {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Tema Oscuro (violetita) */
+body.dark-mode {
+  background-color: #252525;/* violeta oscuro */
+  color: #f1e6ff;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Ajuste navbar */
+.navbar {
+  padding: 10px 20px;
+}
+body.light-mode .navbar {
+  background:  #6b11cbbd;
+}
+body.dark-mode .navbar {
+  background: #252525;
+}
+
+/* Botón de toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* FORMULARIO EN LIGHT MODE */
+body.light-mode .contact-form {
+  background-color:  #6b11cbbd;
+  color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  border-bottom: 2px solid #1a1a1a;
+  color: #1a1a1a;
+}
+body.light-mode .contact-form button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+/* FORMULARIO EN DARK MODE */
+body.dark-mode .contact-form {
+  background-color: #252525; /* violeta oscuro */
+  color: #f1e6ff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.692);
+    
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  border-bottom: 2px solid #f1e6ff;
+  color: #f1e6ff;
+}
+body.dark-mode .contact-form button {
+  background: linear-gradient(to right, #000000, #6a11cb);
+  color: #fff;
+}
+
+/* FOOTER en LIGHT MODE */
+body.light-mode .site-footer {
+  background:  #6b11cbbd;
+  color: #1a1a1a;
+}
+body.light-mode .site-footer a {
+  color: #313131;
+  transition: color 0.3s;  
+   font-weight: bold;  
+}
+body.light-mode .site-footer a:hover {
+  text-decoration: underline;
+  color: #313131;
+ 
+}
+
+/* FOOTER en DARK MODE */
+body.dark-mode .site-footer {
+  background:#252525 ; /* violeta oscuro #3a005a */
+  color: #f1e6ff;
+}
+body.dark-mode .site-footer a {
+  color: #cfc7c7;
+}
+body.dark-mode .site-footer a:hover {
+  text-decoration: none;
+  color: #ffe3ff;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video cubra todo el área sin deformarse */
+
+}
+
+/* ---------------------- */
+/* ESTILOS RESPONSIVOS 📱 */
+/* ---------------------- */
+
+/* Dispositivos pequeños (móviles en vertical, hasta 768px) */
+@media (max-width: 768px) {
+  
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-left a {
+    padding: 8px 0;
+    display: block;
+  }
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  /* Hero (video) */
+  .hero {
+    height: 60vh; /* no ocupa toda la pantalla en móviles */
+  }
+  .hero video {
+    object-fit: cover;
+  }
+
+  /* Sección de contacto */
+  .contact-section {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .contact-form, .contact-info {
+    max-width: 100%;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info img {
+    margin: 15px auto;
+    display: block;
+  }
+
+  /* Formulario */
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Footer */
+  .footer-top {
+    text-align: center;
+  }
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Extra pequeño (móviles < 480px) */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+  .contact-form h2 {
+    font-size: 1.2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.85rem;
+  }
+  .contact-form button {
+    font-size: 0.85rem;
+  }
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .whatsapp-container img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+#toast {
+  transition: all 0.5s ease;
+}
+
 </style>
 
 </head>
@@ -20,8 +379,8 @@
     <div class="nav-left">
       <span class="logo">MBTech</span>
       <a href="index.html">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
+      <a href="index.html">Servicios</a>
+      <a href="index.html">Proyectos</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="nav-right">
@@ -32,6 +391,366 @@
 </div>
   
   </div>
-
   </nav>
+<header class="hero">
+  <div id="particles-js"></div>
+  <div class="hero-content">
+    <h1>Sobre <span>MBTech</span></h1>
+    <p class="slogan">El momento de evolucionar es ahora: lleva tu empresa al siguiente nivel con innovación real.</p>
+    <p class="slogan">No esperes más: impulsa tu negocio hoy con la tecnología que transforma resultados.</p>
+    <p class="slogan">Haz que cada decisión cuente: potencia tu organización con soluciones inteligentes ahora.</p>
+   <!-- <p class="slogan">No dejes que tu competencia te adelante: descubre cómo nuestra tecnología acelera tu éxito.</p>-->
+    <p class="slogan">Convierte oportunidades en resultados hoy, con herramientas que hacen tu negocio imparable.</p>
+  </div>
+  <video autoplay muted loop playsinline>
+    <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+</header>
+<style>.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
 
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.slogan {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+  font-size: 1.6rem;
+  line-height: 1.8rem;   /* más espacio entre líneas */
+  margin: 2.5rem 0;      /* separación mayor entre slogans */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* legibilidad sobre video */
+}
+
+.slogan.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* aparición suave + zoom */
+}
+
+</style>
+<script>
+  const slogans = document.querySelectorAll('.slogan');
+  let delay = 0;
+
+  slogans.forEach((slogan) => {
+    setTimeout(() => {
+      slogan.classList.add('visible');
+    }, delay);
+    delay += 4000; // 4 segundos entre cada slogan
+  });
+</script>
+
+ <img class="Logo" src="Assets/Icons/logo_mbtech_transparente.png" width="10%" style="border-radius: 100px;">
+
+
+  <main class="herou">
+    <section class="herou__text">
+      <h1 class="title">Como nacio  <span class="year">MBTECH</span></h1>
+
+      <p class="lead">
+        🌐 Mi historia como MBTECH
+
+En mis comienzos, no tenía más que una computadora muy básica y acceso a internet. No tuve mentores, no pagué cursos costosos, ni alguien que me guiara paso a paso. Todo lo aprendí de la forma más dura: a los golpes, equivocándome una y otra vez.
+
+Mi universidad fueron los tutoriales en YouTube, los foros, la documentación técnica y las horas interminables frente a la pantalla. Muchas veces me frustré, pero cada error fue una oportunidad para crecer.
+
+Recuerdo mis primeros trabajos como freelancer: mal pagados, con plazos imposibles y clientes exigentes. Pero en lugar de rendirme, cada reto me obligó a mejorar, a investigar más, a volverme más fuerte.
+
+El día que recibí mi primer pago real por un proyecto, aunque fuese poco, confirmé que este camino era el mío. Había convertido la pasión en una profesión.
+
+Así nació MBTECH: no solo como un nombre, sino como un símbolo de esfuerzo, resiliencia y pasión por la programación. Hoy mi objetivo es claro: transformar ideas en soluciones tecnológicas, con la misma creatividad y disciplina que me hicieron llegar hasta aquí.
+
+Si algo quiero dejar como mensaje es que no necesitas tenerlo todo para empezar. Con disciplina, curiosidad y constancia, cualquier sueño es alcanzable.
+      </p>
+
+      <p class="desc">
+        Este reporte es una demostracion del compromiso y orientacion que se tiene como empresa a nivel local, regional e internacionalmente.
+      </p>
+
+      <a class="btn" href="#" role="button">Objetivos MBTECH</a>
+    </section>
+
+    <aside class="hero__image">
+      <!-- Cambia 'report.jpg' por el nombre de tu imagen -->
+      <img src="Assets/img/MBTECH HOLOGRAMA.png" alt="Edificio Grupo Corven" class="building" />
+
+      <div class="overlay">
+        <p class="overlay__kicker">Como</p>
+        <h2 class="overlay__title">Trabajamos en <span class="overlay__year">2025</span></h2>
+        <div class="brand">GRUPO <strong>MBTECH</strong></div>
+      </div>
+    </aside>
+  </main>
+
+
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; color: #fff; }
+
+.herou {
+  
+  margin-top: -5px;
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  gap: 0;
+ width: 80%; 
+  margin: auto;
+}
+
+/* Columna izquierda: texto */
+.herou__text {
+  flex: 1 1 50%;
+  background: linear-gradient(180deg, #141418 0%, #1b1b1f 100%); /* tonalidad oscura */
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Títulos */
+.title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.year {
+  color: #668fff; /* naranja suave como en la foto */
+  font-weight: 700;
+}
+
+/* Parrafos */
+.lead {
+  color: #d8d8d8;
+  line-height: 1.6;
+  max-width: 56ch;
+  font-size: 1rem;
+}
+
+.desc {
+  color: #bdbdbd;
+  line-height: 1.5;
+  max-width: 62ch;
+  font-size: 0.95rem;
+}
+
+/* Boton */
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  width: max-content;
+  transition: transform .12s ease, background .12s ease;
+}
+.btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.03); }
+
+/* Columna derecha: imagen */
+.hero__image {
+  flex: 1 1 50%;
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* Imagen se adapta y cubre */
+.hero__image .building {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.95) contrast(.98);
+  transform-origin: center;
+}
+
+/* Superposición de texto sobre la imagen (abajo a la derecha parecido a la foto) */
+.overlay {
+  position: absolute;
+  right: 24px;
+  bottom: 36px;
+  text-align: right;
+  backdrop-filter: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  padding: 12px 16px;
+}
+
+.overlay__kicker {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  opacity: 0.95;
+}
+
+.overlay__title {
+  font-size: clamp(18px, 2.2vw, 28px);
+  margin: 0;
+  color: #8f66ff; /* mismo naranja */
+  font-weight: 700;
+  text-transform: none;
+}
+
+.overlay__year { font-weight: 700; }
+
+/* Marca (puedes personalizar) */
+.brand {
+  margin-top: 6px;
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Responsive: en móviles apilar verticalmente */
+@media (max-width: 900px) {
+  .hero { flex-direction: column; }
+  .hero__text { padding: 36px; order: 1; }
+  .hero__image { order: 2; min-height: 320px; }
+  .overlay { right: 18px; bottom: 18px; }
+}
+
+/* Pequeños ajustes para pantallas muy estrechas */
+@media (max-width: 420px) {
+  .hero__text { padding: 24px; }
+  .title { font-size: 24px; }
+}
+</style>
+
+<div class="whatsapp-container">
+  <a href="https://wa.me/5491126027687" target="_blank">
+<img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
+</div>
+
+<footer class="site-footer">
+  <!-- Parte superior -->
+  <div class="footer-top">
+    <div class="social-icons">
+      <span>Sígueme:</span>
+        
+      <a href="https://github.com/Mgabrizuela017" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/icono_github.gif" alt="Git-hub / git_hub" style="border-radius: 100px;" class="social-icon">
+      </a>
+
+      <a href="https://www.linkedin.com/in/marcos-brizuela07/" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      
+      <a href="https://www.youtube.com/tu-canal" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/youtube.svg" alt="YouTube" class="social-icon" id="social-icon-youtube">
+      </a>     
+       <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/facebook.svg" alt="Facebook" class="social-icon">
+      </a>
+          <!--  <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/x-logo.svg" alt="X / Twitter" class="social-icon">-->
+      <a href="https://www.instagram.com/mbtech07?igsh=MTNmdHh4emhtZ3gwbQ==" target="_blank" rel="noopener noreferrer">
+      <img src="Assets/Icons/mandalaig.png" alt="Instagram" class="social-icon" id="social-icon-ig">
+
+
+     <!-- <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/tiktok.svg" alt="TikTok" class="social-icon">-->
+      </a>
+    </div>
+  </div>
+
+  <!-- Parte inferior -->
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="https://github.com/Mgabrizuela017">Gi-hub</a>      
+      <a href="Assets/Terminos_y_Privacidad_Profesiona MBTECHl.pdf" target="_blank">Términos y privacidad</a>
+      <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
+      <a href="#">Productos MBT</a>
+    </div>
+    <div class="language">
+    <label for="language-select">Español - Argentina:</label>
+   <!--<select id="language-select">
+    <option value="es-AR" selected>Español - Argentina</option>
+    <option value="es-ES">Español - España</option>
+    <option value="en-US">English - US</option>
+    <option value="pt-BR">Português - Brasil</option>
+    <option value="fr-FR">Français - France</option>
+  </select>--> 
+</div>
+  </div>
+</footer>
+<!--<script>
+document.getElementById("language-select").addEventListener("change", function() {
+  const idioma = this.value;
+
+  // Redirecciones según idioma
+  switch (idioma) {
+    case "es-AR":
+      window.location.href = "index.html"; // Español Argentina
+      break;
+    case "es-ES":
+      window.location.href = "es/index.html"; // Español España
+      break;
+    case "en-US":
+      window.location.href = "en/index.html"; // Inglés
+      break;
+    case "pt-BR":
+      window.location.href = "pt/index.html"; // Portugués
+      break;
+    case "fr-FR":
+      window.location.href = "fr/index.html"; // Francés
+      break;
+  }
+});
+</script>-->
+
+<!-- Iconos de redes (puedes usar fontawesome) -->
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+<!-- Scripts -->
+
+<script src="script.js"></script>
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Si ya había un modo guardado en localStorage, lo aplicamos
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.textContent = "☀️";
+} else {
+  body.classList.add("light-mode");
+  toggleBtn.textContent = "🌙";
+}
+
+// Evento al hacer click en el botón
+toggleBtn.addEventListener("click", () => {
+  if (body.classList.contains("light-mode")) {
+    body.classList.replace("light-mode", "dark-mode");
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.replace("dark-mode", "light-mode");
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
+});
+</script>
+</body>
+</html>
