@@ -388,8 +388,8 @@ body.dark-mode .site-footer a:hover {
    
     <button id="theme-toggle">🌙</button>
 </div>
-  
   </div>
+<button class="hamburger" id="hamburger">&#9776;</button>
   </nav>
 <header class="hero">
   <div id="particles-js"></div>
@@ -667,3 +667,13 @@ toggleBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+</script>
