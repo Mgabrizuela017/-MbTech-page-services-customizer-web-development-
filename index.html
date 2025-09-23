@@ -41,16 +41,6 @@
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="Assets/styles.css">
   <link rel="icon" href="Assets/Icons/MBTECH HEADER LIGHT.png" type="image/png">
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLeft = document.querySelector(".nav-left");
-  const navRight = document.querySelector(".nav-right");
-
-  hamburger.addEventListener("click", () => {
-    navLeft.classList.toggle("active");
-    navRight.classList.toggle("active");
-  });
-</script>
 
 </head>
 
@@ -72,9 +62,50 @@
   <!-- Botón Hamburguesa -->
   <button class="hamburger" id="hamburger">&#9776;</button>
 
-
 </nav>
 
+<style>/* Modo responsive */
+@media (max-width: 768px) {
+  .nav-left a {
+    display: none; /* oculto links */
+  }
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display:flex;
+  }
+
+  /* Clase activa para mostrar el menú */
+  .nav-left.active a,
+  .nav-right.active {
+    display: flex;
+    flex-direction: column;
+    background: #2d2e31;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-left.active a {
+    padding: 10px;
+    text-align: center;
+  }
+}
+</style>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+</script>
 
 <!-- Botón Cotización -->
 <header class="hero">

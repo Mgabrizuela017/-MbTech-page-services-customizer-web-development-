@@ -406,6 +406,8 @@ body.dark-mode .site-footer a:hover {
   <button class="hamburger" id="hamburger">&#9776;</button>
   </div>
   </nav>
+
+
 <header class="hero">
   <div id="particles-js"></div>
   <div class="hero-content">
@@ -413,15 +415,32 @@ body.dark-mode .site-footer a:hover {
     <p class="slogan">El momento de evolucionar es ahora: lleva tu empresa al siguiente nivel con innovación real.</p>
     <p class="slogan">No esperes más: impulsa tu negocio hoy con la tecnología que transforma resultados.</p>
     <p class="slogan">Haz que cada decisión cuente: potencia tu organización con soluciones inteligentes ahora.</p>
-   <!-- <p class="slogan">No dejes que tu competencia te adelante: descubre cómo nuestra tecnología acelera tu éxito.</p>-->
     <p class="slogan">Convierte oportunidades en resultados hoy, con herramientas que hacen tu negocio imparable.</p>
   </div>
-  <video autoplay muted loop playsinline>
-    <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline poster="/Assets/Icons/planeta-tecnologico.jpg">
+    <source src="/Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
     Tu navegador no soporta video en HTML5.
   </video>
 </header>
-<style>.hero-content {
+<style>
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Cambiado desde height:100vh */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
   position: relative;
   z-index: 2;
   color: white;
@@ -441,29 +460,51 @@ body.dark-mode .site-footer a:hover {
   transform: translateY(40px) scale(0.95);
   transition: opacity 1s ease, transform 1s ease;
   font-size: 1.6rem;
-  line-height: 1.8rem;   /* más espacio entre líneas */
-  margin: 2.5rem 0;      /* separación mayor entre slogans */
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* legibilidad sobre video */
+  line-height: 1.8rem;
+  margin: 2.5rem 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .slogan.visible {
   opacity: 1;
-  transform: translateY(0) scale(1); /* aparición suave + zoom */
+  transform: translateY(0) scale(1);
 }
 
+/* Responsive único para móviles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
 </style>
+
 <script>
-  const slogans = document.querySelectorAll('.slogan');
-  let delay = 0;
+const slogans = document.querySelectorAll('.slogan');
+let delay = 0;
 
-  slogans.forEach((slogan) => {
-    setTimeout(() => {
-      slogan.classList.add('visible');
-    }, delay);
-    delay += 4000; // 4 segundos entre cada slogan
-  });
+slogans.forEach((slogan) => {
+  setTimeout(() => {
+    slogan.classList.add('visible');
+  }, delay);
+  delay += 4000;
+});
 </script>
-
  <img class="Logo" src="Assets/Icons/logo_mbtech_transparente.png" width="10%" style="border-radius: 100px;">
 
 
