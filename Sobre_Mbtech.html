@@ -768,3 +768,13 @@ toggleBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+</script>

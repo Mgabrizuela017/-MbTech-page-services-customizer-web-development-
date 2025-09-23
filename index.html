@@ -41,6 +41,16 @@
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="Assets/styles.css">
   <link rel="icon" href="Assets/Icons/MBTECH HEADER LIGHT.png" type="image/png">
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+</script>
 
 </head>
 
@@ -542,13 +552,3 @@ toggleBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLeft = document.querySelector(".nav-left");
-  const navRight = document.querySelector(".nav-right");
-
-  hamburger.addEventListener("click", () => {
-    navLeft.classList.toggle("active");
-    navRight.classList.toggle("active");
-  });
-</script>
