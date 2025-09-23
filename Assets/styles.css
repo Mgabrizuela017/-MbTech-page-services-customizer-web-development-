@@ -838,7 +838,7 @@ body.light #theme-toggle {
   }
 
   .hamburger {
-    display: block;
+    display:flex;
   }
 
   /* Clase activa para mostrar el menú */
