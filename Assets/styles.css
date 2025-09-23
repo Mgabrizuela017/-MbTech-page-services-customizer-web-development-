@@ -818,3 +818,44 @@ body.light #theme-toggle {
     height: 45px;
   }
 }
+/* Ocultar hamburguesa en escritorio */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Modo responsive */
+@media (max-width: 768px) {
+  .nav-left a {
+    display: none; /* oculto links */
+  }
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Clase activa para mostrar el menú */
+  .nav-left.active a,
+  .nav-right.active {
+    display: flex;
+    flex-direction: column;
+    background: #2d2e31;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-left.active a {
+    padding: 10px;
+    text-align: center;
+  }
+}
