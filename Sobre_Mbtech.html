@@ -396,6 +396,7 @@ body.dark-mode .site-footer a:hover {
       <a href="index.html">Servicios</a>
       <a href="index.html">Proyectos</a>
       <a href="contacto.html">Contacto</a>
+      <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
     </div>
     <div class="nav-right">
     <!-- Botón dentro del nav-right -->
@@ -412,10 +413,8 @@ body.dark-mode .site-footer a:hover {
   <div id="particles-js"></div>
   <div class="hero-content">
     <h1>Sobre <span>MBTech</span></h1>
-    <p class="slogan">El momento de evolucionar es ahora: lleva tu empresa al siguiente nivel con innovación real.</p>
     <p class="slogan">No esperes más: impulsa tu negocio hoy con la tecnología que transforma resultados.</p>
     <p class="slogan">Haz que cada decisión cuente: potencia tu organización con soluciones inteligentes ahora.</p>
-    <p class="slogan">Convierte oportunidades en resultados hoy, con herramientas que hacen tu negocio imparable.</p>
   </div>
   <video autoplay muted loop playsinline poster="/Assets/Icons/planeta-tecnologico.jpg">
     <source src="/Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
@@ -492,6 +491,8 @@ body.dark-mode .site-footer a:hover {
     margin: 1.5rem 0;
   }
 }
+
+
 </style>
 
 <script>
@@ -505,7 +506,8 @@ slogans.forEach((slogan) => {
   delay += 4000;
 });
 </script>
- <img class="Logo" src="Assets/Icons/logo_mbtech_transparente.png" width="10%" style="border-radius: 100px;">
+ 
+<img class="Logo" src="Assets/Icons/logo_mbtech_transparente.png" width="10%" style="border-radius: 100px; margin-top: 20px;">
 
 
   <main class="herou">
@@ -536,8 +538,8 @@ Si algo quiero dejar como mensaje es que no necesitas tenerlo todo para empezar.
     </section>
 
     <aside class="hero__image">
-      <!-- Cambia 'report.jpg' por el nombre de tu imagen -->
-      <img src="Assets/img/MBTECH HOLOGRAMA.png" alt="Edificio Grupo Corven" class="building" />
+     
+      <img src="Assets/img/MBTECH HOLOGRAMA.png" alt="MBTECH PERSON HOLOGRAMA" class="building" />
 
       <div class="overlay">
         <p class="overlay__kicker">Como</p>
@@ -585,7 +587,7 @@ html,body { height: 100%; font-family: Inter, "Segoe UI", Roboto, Arial, sans-se
 }
 
 .year {
-  color: #668fff; /* naranja suave como en la foto */
+  color:#0f6fff;
   font-weight: 700;
 }
 
@@ -692,7 +694,262 @@ html,body { height: 100%; font-family: Inter, "Segoe UI", Roboto, Arial, sans-se
   .hero__text { padding: 24px; }
   .title { font-size: 24px; }
 }
+
 </style>
+
+<div class="container">
+    <!-- Texto visión -->
+    <div class="vision">
+      <h2>Testimonio Kathy ruiz - Salon las 2 banderas</h2>
+      <p>
+      Recomendaría a Marcos sin dudarlo,  supo transformar mi idea en una página web real y funcional. Desde el primer momento entendió lo que necesitaba y lo transformó en un diseño profesional, claro y atractivo. La página no solo refleja la esencia de mi negocio, sino que también es práctica y fácil de usar para mis clientes. Me sentí acompañada en todo el proceso, con mucha paciencia, compromiso y atención a los detalles. Recomiendo su trabajo a cualquier persona que busque una página web bien hecha, funcional y con un toque humano que marque la diferencia.
+      </p>
+    </div>
+
+    <!-- Imagen principal -->
+    <div class="imagen-principal">
+      <img src="Assets/img/2banderillas.png" alt="Fábrica Corven">
+    </div>
+
+    <!-- Imagen secundaria -->
+    <div class="imagen-secundaria">
+      <img src="Assets/img/Sociedad creativa.png" alt="Producción de motos">
+    </div>
+
+    <!-- Lista pilares -->
+    <div class="pilares">
+      <h3>Nuestros pilares</h3>
+      <ul>
+        <li>Alta performance</li>
+        <li>Más soluciones en el camino</li>
+        <li>Proceso de producción y servicio</li>
+        <li>Escucha activa al usuario</li>
+        <li>Creatividad, innovación y alta resistencia</li>
+        <li>Compromiso sostenido</li>
+      </ul>
+    </div>
+  </div>
+
+ <style>
+   
+/* ===== BASE (común a ambos) ===== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 40px;
+  align-items: start;
+}
+
+.vision {
+  grid-column: 1 / 2;
+}
+
+.vision h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.vision p {
+  line-height: 1.6;
+}
+
+.imagen-principal {
+  grid-column: 2 / 3;
+}
+
+.imagen-principal img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.imagen-secundaria {
+  grid-column: 1 / 2;
+  margin-top: 30px;
+}
+
+.imagen-secundaria img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.pilares {
+  grid-column: 2 / 3;
+  margin-top: 30px;
+}
+
+.pilares h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.pilares ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pilares ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pilares ul li::before {
+  content: "●";
+  color: rgb(90, 183, 245);
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  top: 0;
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.step {
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  background: #0f6fff;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.step h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.step ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* ===== LIGHT MODE ===== */
+body.light .vision h2,
+body.light .pilares h3,
+body.light .step h2 {
+  color: #222;
+}
+
+body.light .vision p,
+body.light .pilares ul li,
+body.light .step ul {
+  color: #444;
+}
+
+body.light .steps {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+
+body.light .step {
+  background: #ffffff;
+}
+
+/* ===== DARK MODE ===== */
+body.dark .vision h2,
+body.dark .pilares h3,
+body.dark .step h2 {
+  color: #ffffff;
+}
+
+body.dark .vision p {
+  color: #ccc;
+}
+
+body.dark .pilares ul li {
+  color: #ddd;
+}
+
+body.dark .steps {
+  background: #363636;
+}
+
+body.dark .step {
+  background: #434446;
+}
+
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Cómo trabajamos</h1>
+    <section class="steps">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <h2>Primer contacto</h2>
+        <ul>
+          <li>Los proyectos se coordinan por <strong>WhatsApp</strong> o por el teléfono indicado.</li>
+          <li>El cliente comparte su interés o inquietud.</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <h2>Reunión inicial</h2>
+        <ul>
+          <li>Videollamada (Google Meet, WhatsApp u otra).</li>
+          <li>Se charlan ideas, necesidades e inquietudes.</li>
+          <li>Se orienta sobre la gama de servicios.</li>
+          <li>Demos de ejemplo o personalización de servicios.</li>
+          <li>Plantillas, modelos propios o clonaciones <strong>similares</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <h2>Condiciones de trabajo</h2>
+        <ul>
+          <li>Pago: 50% al inicio y 50% al finalizar.</li>
+          <li>Extras fuera de presupuesto se cobran aparte.</li>
+          <li>Desplazamientos se cobran por tiempo del desarrollador.</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <h2>Inicio del proyecto</h2>
+        <ul>
+          <li>Se comienza con el desarrollo.</li>
+          <li>Incluye capacitación según el tipo de trabajo.</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <h2>Mantenimiento</h2>
+        <ul>
+          <li>Se cobra <strong>por intervención</strong>.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+
 
 <div class="whatsapp-container">
   <a href="https://wa.me/5491126027687" target="_blank">
@@ -819,3 +1076,4 @@ toggleBtn.addEventListener("click", () => {
     navRight.classList.toggle("active");
   });
 </script>
+

@@ -282,7 +282,7 @@ body.dark-mode .site-footer a:hover {
 /* Corrección de video en móviles */
 @media (max-width: 768px) {
   .hero {
-     /* deja que el contenido determine la altura */
+    height: auto; /* deja que el contenido determine la altura */
     min-height: 60vh; /* asegura que se vea decente */
   }
 
@@ -293,7 +293,11 @@ body.dark-mode .site-footer a:hover {
     object-fit: cover;  /* mantiene recorte bonito */
   }
 }
-
+@media (max-width: 480px) {
+  .hero video {
+    max-height: 50vh;
+  }
+}
 
 
   /* Sección de contacto */
@@ -391,6 +395,7 @@ body.dark-mode .site-footer a:hover {
       <a href="index.html">Servicios</a>
       <a href="index.html">Proyectos</a>
       <a href="contacto.html">Contacto</a>
+      <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
     </div>
     <div class="nav-right">
     <!-- Botón dentro del nav-right -->
@@ -406,13 +411,11 @@ body.dark-mode .site-footer a:hover {
   <div class="hero-content">
     <h1>Dejanos tu consulta <span>MBTech</span></h1>
     <p class="slogan">El momento de evolucionar es ahora: lleva tu empresa al siguiente nivel con innovación real.</p>
-    <p class="slogan">No esperes más: impulsa tu negocio hoy con la tecnología que transforma resultados.</p>
-    <p class="slogan">Haz que cada decisión cuente: potencia tu organización con soluciones inteligentes ahora.</p>
    <!-- <p class="slogan">No dejes que tu competencia te adelante: descubre cómo nuestra tecnología acelera tu éxito.</p>-->
     <p class="slogan">Convierte oportunidades en resultados hoy, con herramientas que hacen tu negocio imparable.</p>
   </div>
   <video autoplay muted loop playsinline>
-    <source src="Assets/Icons/planeta-tecnologico.mp4" type="video/mp4">
+    <source src="Assets/Icons/FONDO PURPPLE GALAXY (online-video-cutter.com).mp4" type="video/mp4">
     Tu navegador no soporta video en HTML5.
   </video>
 </header>
