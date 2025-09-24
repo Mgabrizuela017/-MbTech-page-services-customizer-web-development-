@@ -279,18 +279,44 @@ body.dark-mode .site-footer a:hover {
   }
 
 
-/* Corrección de video en móviles */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* en vez de height */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Asegura que el contenido esté encima */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
 @media (max-width: 768px) {
   .hero {
-    height: auto; /* deja que el contenido determine la altura */
-   /* min-height: 60vh;  asegura que se vea decente */
+    min-height: 60vh;
   }
 
   .hero video {
     width: 100%;
-    height: auto;       /* mantiene proporción */
-    max-height: 60vh;   /* evita que se desborde */
-    object-fit: cover;  /* mantiene recorte bonito */
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
   }
 }
 

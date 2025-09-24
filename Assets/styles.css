@@ -670,45 +670,42 @@ body.light #theme-toggle {
   }
 }
 
-/* Móviles pequeños (máx. 768px) */
-@media (max-width: 768px) {
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Contenedor de enlaces */
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-/* Móviles pequeños */
-@media (max-width: 768px) {
+/* Media query para móviles */
+@media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav-links {
     display: flex;
-    flex-direction: row;       /* Mantener horizontal */
-    overflow-x: auto;          /* Scroll horizontal si no caben */
-    -webkit-overflow-scrolling: touch; /* Mejor experiencia en iOS */
-    gap: 10px;
-    padding: 5px 0;
-    scrollbar-width: none;     /* Firefox: ocultar scrollbar */
-  }
-
-  .nav-links::-webkit-scrollbar {
-    display: none;             /* Chrome, Edge, Safari: ocultar scrollbar */
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
 
   .nav-links a {
-    flex: 0 0 auto;            /* Evita que los enlaces se encojan */
-    padding: 10px;
-    white-space: nowrap;       /* Evita que el texto se rompa */
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+
+  .nav-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 }
 
