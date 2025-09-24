@@ -675,7 +675,7 @@ body.light #theme-toggle {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 /* Contenedor de enlaces */
