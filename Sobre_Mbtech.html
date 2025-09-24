@@ -890,6 +890,67 @@ body.dark .step {
   background: #434446;
 }
 
+/* ===== MEDIA QUERIES ===== */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    padding: 20px;
+  }
+
+  .vision,
+  .imagen-principal,
+  .imagen-secundaria,
+  .pilares {
+    grid-column: 1 / -1; /* Ocupan todo el ancho */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .steps {
+    grid-template-columns: 1fr; /* Cada step ocupa toda la fila */
+    padding: 10px;
+    gap: 16px;
+  }
+
+  .step {
+    padding: 15px;
+  }
+
+  .step h2 {
+    font-size: 1rem;
+  }
+
+  .step-num {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos pequeños) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .vision h2,
+  .pilares h3 {
+    font-size: 20px;
+  }
+
+  .vision p,
+  .pilares ul li {
+    font-size: 14px;
+  }
+
+  .step h2 {
+    font-size: 0.95rem;
+  }
+}
+S
 
   </style>
 </head>
