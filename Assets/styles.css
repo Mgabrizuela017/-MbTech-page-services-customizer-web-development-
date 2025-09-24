@@ -696,7 +696,7 @@ body.light #theme-toggle {
     flex-direction: row;       /* Mantener horizontal */
     overflow-x: auto;          /* Scroll horizontal si no caben */
     -webkit-overflow-scrolling: touch; /* Mejor experiencia en iOS */
-    gap: 10px;
+    gap: 5px;
     padding: 5px 0;
     scrollbar-width: none;     /* Firefox: ocultar scrollbar */
   }
