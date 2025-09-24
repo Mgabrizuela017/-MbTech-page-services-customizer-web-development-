@@ -687,7 +687,7 @@ body.light #theme-toggle {
 /* Móviles pequeños */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
   }
 
@@ -696,7 +696,7 @@ body.light #theme-toggle {
     flex-direction: row;       /* Mantener horizontal */
     overflow-x: auto;          /* Scroll horizontal si no caben */
     -webkit-overflow-scrolling: touch; /* Mejor experiencia en iOS */
-    gap: 5px;
+    gap: 10px;
     padding: 5px 0;
     scrollbar-width: none;     /* Firefox: ocultar scrollbar */
   }
