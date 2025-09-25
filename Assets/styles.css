@@ -14,8 +14,7 @@
       padding: 0;
     }
 
-
-/* NAVBAR */
+/* NAVBAR - Estilos existentes con mejoras para espaciado */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,7 @@
 
 .navbar .nav-left {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* Mantiene el gap original entre logo y enlaces */
   align-items: center;
 }
 
@@ -40,11 +39,19 @@
   color: #4db8ff;
 }
 
+/* NUEVO: Estilos para .nav-links con gap para espaciado de enlaces */
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem; /* Gap más amplio para espaciar los <a> en desktop (ajusta si quieres más/menos) */
+  align-items: center;
+}
+
 .navbar a {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s;
+  white-space: nowrap; /* Evita que el texto se rompa en líneas */
 }
 
 .navbar a:hover {
@@ -57,13 +64,142 @@
   gap: 1rem;
 }
 
-.navbar input {
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
+/* Botón hamburguesa (existente, pero ahora lo mostramos en móviles) */
+.hamburger {
+  display: none; /* Oculto en desktop */
+  font-size: 1.8rem;
+  background: none;
   border: none;
-  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s;
 }
 
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* LIGHT MODE para navbar (existente, sin cambios) */
+body.light .navbar {
+  background-color: #b77af8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+body.light .navbar .logo {
+  color: #6a11cb;
+}
+
+body.light .navbar a {
+  color: #333;
+}
+
+body.light .navbar a:hover {
+  color: #6a11cb;
+}
+
+/* RESPONSIVO - Media queries actualizadas para móviles */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem 1rem; /* Padding ajustado para más espacio */
+  }
+  
+  .nav-left {
+    flex-direction: column; /* Logo arriba, enlaces abajo en desktop mediano */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  /* En tablets (992px+), mantener enlaces horizontales con gap */
+  .nav-links {
+    gap: 1.2rem; /* Gap intermedio para tablets */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mostrar hamburguesa solo en móviles */
+  .hamburger {
+    display: block; /* Visible en móviles */
+    position: absolute;
+    top: 1rem;
+    right: 1rem; /* Posicionado en esquina superior derecha */
+  }
+
+  /* Ocultar enlaces por defecto en móviles */
+  .nav-links {
+    display: none; /* Ocultos inicialmente */
+    flex-direction: column; /* Vertical cuando se muestra */
+    gap: 1rem; /* Gap vertical para espaciado en móviles (más espaciado que horizontal) */
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #2a2a2a; /* Fondo para el menú desplegable */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    position: absolute;
+    top: 100%; /* Debajo del nav */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Clase para mostrar el menú (agregada por JS) */
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    padding: 0.8rem 1rem; /* Padding extra para tocar más fácil en touch */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Separador visual */
+    text-align: center;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none; /* Sin borde en el último */
+  }
+
+  /* Ocultar el logo en el menú para ahorrar espacio (opcional) */
+  .nav-left .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Ajustes para light mode en móviles */
+  body.light .nav-links {
+    background-color: #b77af8;
+  }
+
+  body.light .nav-links a {
+    color: #333;
+    border-bottom-color: rgba(0,0,0,0.1);
+  }
+
+  body.light .hamburger {
+    color: #6a11cb;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.8rem; /* Gap un poco menor en móviles muy pequeños para no ocupar tanto espacio */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Texto más pequeño */
+    padding: 0.6rem 0.8rem;
+  }
+
+  .hamburger {
+    font-size: 1.5rem; /* Icono más pequeño en pantallas tiny */
+  }
+}
 /* Botón Dark/Light */
 #theme-toggle {
   background: transparent;
@@ -860,5 +996,131 @@ body.light #theme-toggle {
   border: none;
   color: #fff;
   cursor: pointer;
+}
+
+
+
+
+
+/* Galería de Promociones - Versión con Imágenes Más Grandes */
+.promotions-gallery {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: inherit; /* Se adapta al modo claro/oscuro */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentado de 250px a 300px para más espacio */
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff; /* Fondo por defecto para light mode */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;          /* Ocupa todo el ancho del contenedor */
+  height: 100%;         /* Ocupa toda la altura */
+  object-fit: cover;    /* Mantiene proporción y recorta si es necesario */
+  border-radius: 10px;  /* Bordes redondeados */
+  display: block;       /* Evita espacios extra */
+}
+
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  padding: 20px 15px 15px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+.item-overlay p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Adaptación a Light Mode */
+body.light-mode .gallery-item {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .gallery-title {
+  color: #1a1a1a;
+}
+
+/* Adaptación a Dark Mode */
+body.dark-mode .gallery-item {
+  background: #2d2e31;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .gallery-title {
+  color: #f1e6ff;
+}
+
+body.dark-mode .item-overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* Responsive para móviles y tablets */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ligeramente reducido para móviles */
+    gap: 15px;
+  }
+  
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+  
+  .gallery-item img {
+    height: 220px; /* Ajustado de 150px a 220px para mantener proporción más grande en móviles */
+  }
+  
+  .promotions-gallery {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+  
+  .gallery-item img {
+    height: 200px; /* Altura moderada en móviles muy pequeños */
+  }
 }
 

@@ -45,25 +45,26 @@
 </head>
 
 <body>
- <nav class="navbar">
+<nav class="navbar">
   <div class="nav-left">
     <span class="logo">MBTech</span>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="index.html">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#proyectos">Proyectos</a>
       <a href="contacto.html">Contacto</a>
       <a href="Sobre_Mbtech.html">MBTECH</a>
     </div>
+    <!-- Botón hamburguesa (solo visible en móviles) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+      ☰
+    </button>
   </div>
 
   <div class="nav-right">
     <button id="theme-toggle">🌙</button>
   </div>
 </nav>
-
-
-
 <!-- Botón Cotización -->
 <header class="hero">
   <div id="particles-js"></div>
@@ -76,7 +77,45 @@
 
 <img class="Logo" src="Assets/Icons/logo_mbtech_transparente.png" width="10%" style="border-radius: 100px;">
 
+<!-- Insertar este código justo después de la etiqueta <img class="Logo" ...> y antes de <main class="herou"> -->
 
+<section class="promotions-gallery">
+  <h2 class="gallery-title">Promociones Especiales</h2>
+  <div class="gallery-grid">
+    <!-- Imagen 1: Reemplaza src con tu imagen de promoción -->
+    <div class="gallery-item">
+      <img src="Assets/img/Promocion 1.png" alt="Promoción 1: Descuento en desarrollo web" loading="lazy">
+      <div class="item-overlay">
+        <!--<p>Descuento 20% en Desarrollo Web</p>-->
+      </div>
+    </div>
+
+   <!-- Imagen 3: Reemplaza src con tu imagen de promoción -->
+    <div class="gallery-item">
+<video src="Assets/img/Historia para Instagram Descuentos Neon Rosado y Azul.mp4" 
+       width="195px" 
+       autoplay 
+       muted 
+       loop 
+       playsinline>
+</video>
+      <div class="item-overlay">
+       <!-- <p>Paquete Transformación Digital</p>-->
+      </div>
+    </div>
+
+    <!-- Imagen 2: Reemplaza src con tu imagen de promoción -->
+    <div class="gallery-item">
+      <img src="Assets/img/Promocion 200.000. ARS.png" alt="Promoción 2: Soporte IT gratis" loading="lazy">
+      <div class="item-overlay">
+        <!--<p>Soporte IT Gratuito por 1 Mes</p>-->
+      </div>
+    </div>
+    
+   
+    
+  </div>
+</section>
 <!-- Modal de cotización -->
 <div id="modalCotizacion" class="modal">
   <div class="modal-content">
@@ -124,6 +163,255 @@
     </div>
   </div>
 </div>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 900px;
+  background: #2d2e31;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Contenedor horizontal */
+.services-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* Tarjeta individual */
+.service-card {
+  background: #3a3b3f;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  min-width: 180px;   /* ahora son más pequeñas */
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.service-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.service-card h3 {
+  margin: 8px 0 4px;
+  font-size: 1rem;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  margin: 3px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 6px 10px;
+  background: #00ffcc;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #00cc99;
+}
+
+/* Estilos para la sección de medios de pago */
+.payment-methods {
+  text-align: center;
+  margin: 40px 0; /* Espaciado para separar de promociones (arriba) y servicios (abajo) */
+  padding: 20px 0;
+}
+
+.payment-methods h2 {
+  font-size: 1.8rem;
+  color: #fff; /* Ajusta según tu tema oscuro/claro */
+  margin-bottom: 20px;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre logos */
+  flex-wrap: wrap; /* Para responsividad en pantallas pequeñas */
+}
+
+.payment-logos img {
+  height: 60px; /* Altura fija para los logos; ajusta según tus imágenes */
+  width: auto; /* Mantiene proporción */
+  transition: transform 0.3s ease; /* Transición suave para el movimiento */
+  cursor: pointer; /* Indica interactividad */
+}
+
+.payment-logos img:hover {
+  transform: scale(1.1) translateY(-5px); /* Movimiento leve: escala y elevación en mousein */
+}
+
+.payment-logos img:active {
+  transform: scale(0.95); /* Efecto de "presión" en click, opcional */
+}
+</style>
+<!--
+.modal-content {
+  background: #ffffff; /* Fondo claro */
+  color: #222; /* Texto oscuro */
+}
+
+.close {
+  color: #333;
+}
+
+.service-card {
+  background: #f5f5f5;  /* Tarjetas claras */
+  color: #222;
+  border: 1px solid #ddd;
+}
+
+.service-card h3 {
+  color: #111;
+}
+
+.price {
+  font-weight: bold;
+  color: #0077cc; /* Azul llamativo */
+}
+
+.download-btn {
+  background: #0077cc; 
+  color: #fff;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #005fa3;
+}
+-->
+
+<!-- Script -->
+<script>
+  const btn = document.getElementById("btnCotizar");
+  const modal = document.getElementById("modalCotizacion");
+  const closeBtn = document.querySelector(".close");
+
+  btn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+  
+
+<!-- Nueva sección de Medios de Pago (insertada arriba de los servicios y asumiendo que va abajo de promociones) -->
+<section class="payment-methods">
+  <h2>MEDIOS DE PAGO</h2>
+  <div class="payment-logos">
+    <!-- Reemplaza las rutas de las imágenes con las tuyas reales en Assets/img/ -->
+
+    <img src="Assets/Icons/MasterCard_Logo.svg.png" alt="Mastercard" title="Pago con Mastercard">
+    <img src="Assets/Icons/VISA.png" alt="Visa" title="Pago con Visa">
+    <img src="Assets/Icons/American_Express_logo_(2018).svg.png" alt="Mastercard" title="Pago con Mastercard">
+    <img src="Assets/Icons/Entidad bancaria.png" alt="Transferencia Bancaria" title="Transferencia Bancaria">
+    <img src="Assets/Icons/pagofacil logo_png.png" alt="(PAGO_FACIL)" title="Pago_facil">
+    <img src="Assets/Icons/Mercadopago logo.png" alt="(MP)" title="mercado_pago (MP)">
+    <img src="Assets/Icons/BINANCE.png" alt="Binance" title="Pago vía Binance">
+    <img src="Assets/Icons/USDT.png" alt="USDT Crypto" title="Pago con USDT (Cripto)">
+   
+  </div>
+</section>
+
+<!-- Contenido principal -->
+  <main class="container"  id="servicios">
+
+
+<h2 id="servicios" style="font-size: 2rem;"> Servicios</h2>
+    <section  class="card">
+      <div class="card-text">
+        <h2>Computación en la Nube</h2>
+        <p>Infraestructura segura y escalable para empresas modernas.
+        entrega de recursos informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis y más a través de Internet, generalmente bajo un modelo de pago por consumo.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/01cloud.png" alt="Cloud">
+      </div>
+    </section>
+
+  
+
+ <section  class="card">
+      <div class="card-text">
+        <h2>Sistemas de gestion "CRM"</h2>
+        <p>Un sistema CRM (Customer Relationship Management o Gestión de Relaciones con Clientes) es un software que integra todas las interacciones y datos de una empresa con sus clientes para mejorar la comunicación, optimizar el proceso de ventas, brindar un servicio más personalizado y aumentar la satisfacción y la retención de los clientes. <br>Estas herramientas organizan información de clientes, automatizan procesos, generan análisis y proporcionan un espacio centralizado para los equipos de ventas, marketing y atención al cliente. </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/LA-VISIOCONFERENCE-3.jpg" alt="CMR">
+      </div>
+    </section>
+
+ 
+<section  class="card">
+      <div class="card-text">
+        <h2>Desarrollo Web</h2>
+        <p>El desarrollo web es el proceso de crear y mantener sitios y aplicaciones web, abarcando desde el diseño visual (front end) hasta la funcionalidad y lógica interna (back end). </p> <br>
+        <p>Se utiliza lenguajes de programación como HTML, CSS y JavaScript herramientas para dar forma a la interfaz con la que interactúan los usuarios, mientras que el back end maneja la base de datos y la lógica del sistema, asegurando que la web sea funcional, segura y eficiente. </p>
+      </div>
+      <div class="card-img">
+        <img class="web-desing" src="Assets/img/Diseñoweb mejor.jpg" alt="Desarrollo">
+      </div>
+    </section>
+
 <style>
 .modal {
   display: none;
@@ -537,6 +825,39 @@ toggleBtn.addEventListener("click", () => {
     loadParticles(particlesDark);
   }
 });
+</script>
+<script>
+  // Menú hamburguesa responsivo
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Cambiar icono del hamburguesa (opcional: de ☰ a ✕)
+    if (navLinks.classList.contains('active')) {
+      hamburgerBtn.textContent = '✕';
+    } else {
+      hamburgerBtn.textContent = '☰';
+    }
+  });
+
+  // Cerrar menú al hacer clic en un enlace (mejora UX en móviles)
+  const navA = navLinks.querySelectorAll('a');
+  navA.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburgerBtn.textContent = '☰';
+    });
+  });
+
+  // Cerrar menú al redimensionar ventana (si pasa de móvil a desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('active');
+      hamburgerBtn.textContent = '☰';
+    }
+  });
 </script>
 </body>
 </html>
