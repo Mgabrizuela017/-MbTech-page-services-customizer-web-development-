@@ -1,3 +1,7 @@
+
+ 
+  /* Iconos de redes (puedes usar fontawesome) -->*/
+ 
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -73,3 +77,288 @@ toggleBtn.addEventListener("click", () => {
     loadParticles(particlesDark);
   }
 });
+
+
+  // Menú hamburguesa responsivo
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Cambiar icono del hamburguesa (opcional: de ☰ a ✕)
+    if (navLinks.classList.contains('active')) {
+      hamburgerBtn.textContent = '✕';
+    } else {
+      hamburgerBtn.textContent = '☰';
+    }
+  });
+
+  // Cerrar menú al hacer clic en un enlace (mejora UX en móviles)
+  const navA = navLinks.querySelectorAll('a');
+  navA.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburgerBtn.textContent = '☰';
+    });
+  });
+
+  // Cerrar menú al redimensionar ventana (si pasa de móvil a desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('active');
+      hamburgerBtn.textContent = '☰';
+    }
+  });
+
+
+
+<!-- Nueva sección de Medios de Pago (insertada arriba de los servicios y asumiendo que va abajo de promociones) -->
+<section class="payment-methods">
+  <h2>MEDIOS DE PAGO</h2>
+  <div class="payment-logos">
+    <!-- Reemplaza las rutas de las imágenes con las tuyas reales en Assets/img/ -->
+
+    <img src="Assets/Icons/MasterCard_Logo.svg.png" alt="Mastercard" title="Pago con Mastercard">
+    <img src="Assets/Icons/VISA.png" alt="Visa" title="Pago con Visa">
+    <img src="Assets/Icons/American_Express_logo_(2018).svg.png" alt="Mastercard" title="Pago con Mastercard">
+    <img src="Assets/Icons/Entidad bancaria.png" alt="Transferencia Bancaria" title="Transferencia Bancaria">
+    <img src="Assets/Icons/pagofacil logo_png.png" alt="(PAGO_FACIL)" title="Pago_facil">
+    <img src="Assets/Icons/Mercadopago logo.png" alt="(MP)" title="mercado_pago (MP)">
+    <img src="Assets/Icons/BINANCE.png" alt="Binance" title="Pago vía Binance">
+    <img src="Assets/Icons/USDT.png" alt="USDT Crypto" title="Pago con USDT (Cripto)">
+   
+  </div>
+</section>
+
+<!-- Contenido principal -->
+  <main class="container"  id="servicios">
+
+
+<h2 id="servicios" style="font-size: 2rem;"> Servicios</h2>
+    <section  class="card">
+      <div class="card-text">
+        <h2>Computación en la Nube</h2>
+        <p>Infraestructura segura y escalable para empresas modernas.
+        entrega de recursos informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis y más a través de Internet, generalmente bajo un modelo de pago por consumo.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/01cloud.png" alt="Cloud">
+      </div>
+    </section>
+
+  
+
+ <section  class="card">
+      <div class="card-text">
+        <h2>Sistemas de gestion "CRM"</h2>
+        <p>Un sistema CRM (Customer Relationship Management o Gestión de Relaciones con Clientes) es un software que integra todas las interacciones y datos de una empresa con sus clientes para mejorar la comunicación, optimizar el proceso de ventas, brindar un servicio más personalizado y aumentar la satisfacción y la retención de los clientes. <br>Estas herramientas organizan información de clientes, automatizan procesos, generan análisis y proporcionan un espacio centralizado para los equipos de ventas, marketing y atención al cliente. </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/LA-VISIOCONFERENCE-3.jpg" alt="CMR">
+      </div>
+    </section>
+
+ 
+<section  class="card">
+      <div class="card-text">
+        <h2>Desarrollo Web</h2>
+        <p>El desarrollo web es el proceso de crear y mantener sitios y aplicaciones web, abarcando desde el diseño visual (front end) hasta la funcionalidad y lógica interna (back end). </p> <br>
+        <p>Se utiliza lenguajes de programación como HTML, CSS y JavaScript herramientas para dar forma a la interfaz con la que interactúan los usuarios, mientras que el back end maneja la base de datos y la lógica del sistema, asegurando que la web sea funcional, segura y eficiente. </p>
+      </div>
+      <div class="card-img">
+        <img class="web-desing" src="Assets/img/Diseñoweb mejor.jpg" alt="Desarrollo">
+      </div>
+    </section>
+
+
+ <!-- Contenido principal -->
+  <main class="container"  id="servicios">
+
+
+<h2 id="servicios" style="font-size: 2rem;"> Servicios</h2>
+
+    <section  class="card">
+      <div class="card-text">
+        <h2>Computación en la Nube</h2>
+        <p>Infraestructura segura y escalable para empresas modernas.
+        entrega de recursos informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis y más a través de Internet, generalmente bajo un modelo de pago por consumo.
+        </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/01cloud.png" alt="Cloud">
+      </div>
+    </section>
+
+  
+
+ <section  class="card">
+      <div class="card-text">
+        <h2>Sistemas de gestion "CRM"</h2>
+        <p>Un sistema CRM (Customer Relationship Management o Gestión de Relaciones con Clientes) es un software que integra todas las interacciones y datos de una empresa con sus clientes para mejorar la comunicación, optimizar el proceso de ventas, brindar un servicio más personalizado y aumentar la satisfacción y la retención de los clientes. <br>Estas herramientas organizan información de clientes, automatizan procesos, generan análisis y proporcionan un espacio centralizado para los equipos de ventas, marketing y atención al cliente. </p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/LA-VISIOCONFERENCE-3.jpg" alt="CMR">
+      </div>
+    </section>
+
+ 
+<section  class="card">
+      <div class="card-text">
+        <h2>Desarrollo Web</h2>
+        <p>El desarrollo web es el proceso de crear y mantener sitios y aplicaciones web, abarcando desde el diseño visual (front end) hasta la funcionalidad y lógica interna (back end). </p> <br>
+        <p>Se utiliza lenguajes de programación como HTML, CSS y JavaScript herramientas para dar forma a la interfaz con la que interactúan los usuarios, mientras que el back end maneja la base de datos y la lógica del sistema, asegurando que la web sea funcional, segura y eficiente. </p>
+      </div>
+      <div class="card-img">
+        <img class="web-desing" src="Assets/img/Diseñoweb mejor.jpg" alt="Desarrollo">
+      </div>
+    </section>
+
+  <section class="card">
+      <div class="card-text">
+        <h2>Tienda Online -  E-Commerce.</h2>
+        <p>Descripción del servicio:
+        En Mbtech ofrecemos una experiencia de compra y venta en línea completa y confiable, diseñada para que tus clientes encuentren lo que necesitan desde la comodidad de su hogar o en cualquier parte. El servicio incluye todas las propiedades de una pagina convencional con la especificidad de una app robusta con Catalogo y carrito de compra [breve descripción de los productos: ejemplo “ropa, accesorios y gadgets innovadores”], todos seleccionados con cuidado para garantizar calidad, estilo y funcionalidad.
+        Nos encargamos de que tu experiencia sea segura y sencilla, ofreciendo métodos de pago confiables, envíos rápidos y atención al cliente personalizada. Además, nuestro compromiso es que recibas tu servicio de manera puntual y en perfectas condiciones.
+       Con el E-Commerce en Mbtech, comprar en línea nunca fue tan fácil para tus clientes: para que exploren, elijan y reciban tus productos comerciales sin complicaciones, con la confianza de un servicio pensado para ti.</p>
+      </div>
+      <div class="card-img">
+        <img src="Assets/img/Ecommerce 3.jpg" alt="Desarrollo">
+      </div>
+    </section>
+
+  <section class="card">
+      <div class="card-text">
+        <h2>Mantenimiento</h2>
+        <p>Arreglos y optimizacion de sistemas obsoletos y escalabilidad en paginas web desactualizadas y en desuso.</p><br>
+
+        <p>potenciamos tu negocio.
+        Mantenimiento y soporte para páginas web, CRM y sistemas en la nube. Seguridad, eficiencia y confianza en un solo lugar.</p><br>
+      
+      <ul>
+      <span><li> Soporte ágil.</li></span>
+     <span><li> Seguridad y respaldo de datos</li></span>
+      <span><li> Optimización y mejoras continuas</li></span>
+      </ul>
+      </div>
+     
+   <div class="card-img">
+        <img src="Assets/img/Mantenimiento-web el mejor.webp" alt="Desarrollo">
+      </div>
+    </section>
+
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js"></script>
+
+<!--<section class="card">
+      <div class="card-text">
+        <h2>Inteligencia Artificial</h2>
+        <p>Soluciones inteligentes para optimizar procesos y mejorar la productividad.</p>
+      </div>
+      <div class="card-img">
+        <img src="img/ai.png" alt="IA">
+      </div>
+    </section>--> 
+
+    <!--<section class="card">
+      <div class="card-text">
+        <h2>Desarrollo de Software</h2>
+        <p>Aplicaciones a medida con las últimas tecnologías.</p>
+      </div>
+      <div class="card-img">
+        <img src="img/dev.png" alt="Desarrollo">
+      </div>
+    </section>-->
+
+ <section class="features-section">
+    <h2 id="proyectos">Proyectos desarrollados para pequeñas empresas y organizaciones civiles.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="Assets/img/Criadero para perros general rodriguez (2).png" alt="Preview">
+        <h3>Criadero para perros General rodriguez</h3>
+        <p>Proyecto web para un criadero de perros. Adopcion y cobertura, consejos de cuidado y crianza para perros de "raza American pitbull terrier y Bullodg Frances". Esta landing page presenta el Asesoramiento y cria responsable del espacio, permite visualizar los servicios, ubicación, y canales de contacto. 
+           El objetivo es brindar una imagen profesional y moderna del lugar.</p>
+        <button> <a href="https://criaderoparaperosgeneralrodriguez.netlify.app/" target="_blank">+</a></button>
+      </div>
+
+      <div class="feature-card">
+        <img src="Assets/img/Screenshot 2025-09-07 23-09-17.png" alt="Preview">
+        <h3>Salon de eventos las 2 banderas</h3>
+        <p>Proyecto web para una casa de eventos sociales y culturales privados llamada **Las 2 Banderas**. Esta landing page presenta la propuesta del espacio, permite visualizar los servicios, ubicación, y canales de contacto. El objetivo es brindar una imagen profesional y moderna del lugar.</p>
+         <button><a href="https://salon2banderaseventos.netlify.app/" target="_blank"> + </a></button>
+      </div>
+
+      <div class="feature-card">
+        <img src="Assets/img/Sociedad creativa.png" alt="Preview">
+        <h3>Asociacion civil Argentina Sociedad creativa</h3>
+        <p>El sitio web SociedadCreativa.online es la presencia digital de la asociación. Sirve para:
+
+          Informar sobre noticias ambientales y climáticas relevantes.
+
+          Difundir eventos, jornadas o actividades relacionadas con sostenibilidad, cultura, acción climática, vida humana, etc.
+
+          Contar la historia y fundamentos de la organización.
+
+          Facilitar que nuevas personas puedan unirse, contactar y participar.</p>
+      <button><a href="https://sociedadcreativa.online/" target="_blank">+</button></a>
+      </div>
+  </main>
+
+
+<div class="whatsapp-container">
+  <a href="https://wa.me/5491126027687" target="_blank">
+<img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
+</div>
+
+ 
+<!-- HTML: footer con logos sociales -->
+<footer class="site-footer">
+  <!-- Parte superior -->
+  <div class="footer-top">
+    <div class="social-icons">
+      <span>Sígueme:</span>
+        
+      <a href="https://github.com/Mgabrizuela017" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/icono_github.gif" alt="Git-hub / git_hub" style="border-radius: 100px;" class="social-icon">
+      </a>
+
+      <a href="https://www.linkedin.com/in/marcos-brizuela07/" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      
+      <a href="https://www.youtube.com/channel/UCd45-WTFIZri_jKAigSf9wg" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/youtube.svg" alt="YouTube" class="social-icon" id="social-icon-youtube">
+      </a>     
+       <a href="https://web.facebook.com/profile.php?id=61581486174345" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/facebook.svg" alt="Facebook" class="social-icon">
+      </a>
+      
+      <a href="https://www.instagram.com/mbtech07?igsh=MTNmdHh4emhtZ3gwbQ==" target="_blank" rel="noopener noreferrer">
+      <img src="Assets/Icons/mandalaig.png" alt="Instagram" class="social-icon" id="social-icon-ig" >
+
+      <!--  <a href="https://x.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/x-logo.svg" alt="X / Twitter" class="social-icon">-->
+
+     <!-- <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
+        <img src="Assets/Icons/tiktok.svg" alt="TikTok" class="social-icon">-->
+      </a>
+    </div>
+  </div>
+
+  <!-- Parte inferior -->
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="https://github.com/Mgabrizuela017">Gi-hub</a>      
+      <a href="Assets/Documents/Terminos_y_Privacidad_Profesiona MBTECHl.pdf" target="_blank">Términos y privacidad</a>
+      <a href="Sobre_Mbtech.html">Acerca de MBTech</a>
+      <a href="#">Productos MBT</a>
+    </div>
+    <div class="language">Español - Argentina</div>
+  </div>
+</footer>
+</body>
+</html>
+<style></style>
