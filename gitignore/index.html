@@ -55,35 +55,16 @@
       <a href="contacto.html">Contacto</a>
       <a href="Sobre_Mbtech.html">MBTECH</a>
     </div>
-    
+    <!-- Botón hamburguesa (solo visible en móviles) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+      ☰
+    </button>
   </div>
 
   <div class="nav-right">
     <button id="theme-toggle">🌙</button>
   </div>
 </nav>
-
-<style>@media (max-width: 768px) {
-  
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-left a {
-    padding: 8px 0;
-    display: block;
-  }
-  .nav-right {
-    margin-top: 10px;
-  }
-
-</style>
 <!-- Botón Cotización -->
 <header class="hero">
   <div id="particles-js"></div>
@@ -111,7 +92,7 @@
 
    <!-- Imagen 3: Reemplaza src con tu imagen de promoción -->
     <div class="gallery-item">
-<video src="Assets/img/Historia para Instagram Descuentos Neon Rosado y Azul.mp4" 
+<video src="Assets/img/Historia_para_Instagram_Descuentos_Neon_Rosado_y_Azul.mp4" 
        width="195px" 
        autoplay 
        muted 
@@ -132,50 +113,9 @@
     </div>
     
    
+    
   </div>
 </section>
-<style>
-
-
-.promotions-gallery {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.gallery-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: stretch;
-}
-
-.gallery-item {
-  background: #2d2e31;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  max-width: 350px;
-  width: 100%;
-}
-
-.gallery-item img,
-.gallery-item video {
-  width: 100%;
-  height: 500px;   /* altura fija para que todas se alineen */
-  object-fit: cover; /* recorta para mantener proporción sin deformar */
-  border-radius: 8px;
-  display: block;
-}
-
-
-</style>
 <!-- Modal de cotización -->
 <div id="modalCotizacion" class="modal">
   <div class="modal-content">
