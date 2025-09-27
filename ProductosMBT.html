@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Título SEO -->
-  <title>MBTech - Innovación Tecnológica</title>
-
-  <!-- Descripción para SEO -->
-  <meta name="description" content="MBTech ofrece soluciones tecnológicas innovadoras en desarrollo web, soporte IT y transformación digital para empresas y emprendedores.">
-
-  <!-- Palabras clave (no siempre tienen mucho peso en SEO, pero pueden ayudar) -->
-  <meta name="keywords" content="tecnología, innovación, servicios IT, desarrollo web, soporte técnico, transformación digital, MBTech">
-
-  <!-- Autor -->
-  <meta name="author" content="MBTech">
-
   <!-- Control de indexación en buscadores -->
   <meta name="robots" content="index, follow">
 
@@ -43,6 +25,81 @@
   <link rel="icon" href="Assets/Icons/MBTECH HEADER LIGHT.png" type="image/png">
 
 <style>
+
+    /* Hero */
+    .hero2 {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    #particles-js2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h1 span {
+      color: #00ffcc;
+    }
+    .btn-cotizacion {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #00ffcc;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-cotizacion:hover {
+      background: #00cc99;
+    }
+
+    /* Galería de promociones */
+    .promotions-gallery {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .gallery-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      align-items: stretch;
+    }
+    .gallery-item {
+      background: #2d2e31;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      max-width: 350px;
+      width: 100%;
+    }
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
 
 .modal {
   display: none;
@@ -358,6 +415,23 @@ body.dark-mode .gallery-title {
 body.dark-mode .item-overlay {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
+/* Textos en Light Mode */
+body.light h1 {
+  color: #222; /* Color oscuro para h1 */
+}
+
+body.light h1 span {
+  color: #0077cc; /* Mantener acento de color para span dentro de h1 */
+}
+
+body.light h2 {
+  color: #222; /* Color oscuro para h2 */
+}
+
+body.light p {
+  color: #333; /* Color oscuro para párrafos */
+}
+
 
 /* Responsive para móviles y tablets */
 @media (max-width: 768px) {
@@ -525,12 +599,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
 <!-- Botón Cotización -->
-<header class="hero">
-  <div id="particles-js"></div>
+<header class="hero2">
+  <div id="particles-js2"></div>
   <div class="hero-content">
-    <h1>Bienvenido a <span>MBTech</span></h1>
+    <h1>Promociones <span>MBTech</span></h1>
     <p>Innovación, Desarrollo y Tecnología a tu alcance.</p>
     <button class="btn-cotizacion" id="btnCotizar">COTIZACIÓN</button>
   </div>
@@ -642,153 +715,23 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 
-<!-- Contenido principal -->
-  <main class="container"  id="servicios">
 
-
-<h2 id="servicios" style="font-size: 2rem;"> Servicios</h2>
-
-    <section  class="card">
-      <div class="card-text">
-        <h2>Computación en la Nube</h2>
-        <p>Infraestructura segura y escalable para empresas modernas.
-        entrega de recursos informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis y más a través de Internet, generalmente bajo un modelo de pago por consumo.
-        </p>
-      </div>
-      <div class="card-img">
-        <img src="Assets/img/01cloud.png" alt="Cloud">
-      </div>
-    </section>
-
-  
-
- <section  class="card">
-      <div class="card-text">
-        <h2>Sistemas de gestion "CRM"</h2>
-        <p>Un sistema CRM (Customer Relationship Management o Gestión de Relaciones con Clientes) es un software que integra todas las interacciones y datos de una empresa con sus clientes para mejorar la comunicación, optimizar el proceso de ventas, brindar un servicio más personalizado y aumentar la satisfacción y la retención de los clientes. <br>Estas herramientas organizan información de clientes, automatizan procesos, generan análisis y proporcionan un espacio centralizado para los equipos de ventas, marketing y atención al cliente. </p>
-      </div>
-      <div class="card-img">
-        <img src="Assets/img/LA-VISIOCONFERENCE-3.jpg" alt="CMR">
-      </div>
-    </section>
+    <div class="whatsapp-container">
+    <a href="https://wa.me/5491126027687" target="_blank">
+    <img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
+    </div>
 
  
-<section  class="card">
-      <div class="card-text">
-        <h2>Desarrollo Web</h2>
-        <p>El desarrollo web es el proceso de crear y mantener sitios y aplicaciones web, abarcando desde el diseño visual (front end) hasta la funcionalidad y lógica interna (back end). </p> <br>
-        <p>Se utiliza lenguajes de programación como HTML, CSS y JavaScript herramientas para dar forma a la interfaz con la que interactúan los usuarios, mientras que el back end maneja la base de datos y la lógica del sistema, asegurando que la web sea funcional, segura y eficiente. </p>
-      </div>
-      <div class="card-img">
-        <img class="web-desing" src="Assets/img/Diseñoweb mejor.jpg" alt="Desarrollo">
-      </div>
-    </section>
-
-  <section class="card">
-      <div class="card-text">
-        <h2>Tienda Online -  E-Commerce.</h2>
-        <p>Descripción del servicio:
-        En Mbtech ofrecemos una experiencia de compra y venta en línea completa y confiable, diseñada para que tus clientes encuentren lo que necesitan desde la comodidad de su hogar o en cualquier parte. El servicio incluye todas las propiedades de una pagina convencional con la especificidad de una app robusta con Catalogo y carrito de compra [breve descripción de los productos: ejemplo “ropa, accesorios y gadgets innovadores”], todos seleccionados con cuidado para garantizar calidad, estilo y funcionalidad.
-        Nos encargamos de que tu experiencia sea segura y sencilla, ofreciendo métodos de pago confiables, envíos rápidos y atención al cliente personalizada. Además, nuestro compromiso es que recibas tu servicio de manera puntual y en perfectas condiciones.
-       Con el E-Commerce en Mbtech, comprar en línea nunca fue tan fácil para tus clientes: para que exploren, elijan y reciban tus productos comerciales sin complicaciones, con la confianza de un servicio pensado para ti.</p>
-      </div>
-      <div class="card-img">
-        <img src="Assets/img/Ecommerce 3.jpg" alt="Desarrollo">
-      </div>
-    </section>
-
-  <section class="card">
-      <div class="card-text">
-        <h2>Mantenimiento</h2>
-        <p>Arreglos y optimizacion de sistemas obsoletos y escalabilidad en paginas web desactualizadas y en desuso.</p><br>
-
-        <p>potenciamos tu negocio.
-        Mantenimiento y soporte para páginas web, CRM y sistemas en la nube. Seguridad, eficiencia y confianza en un solo lugar.</p><br>
-      
-      <ul>
-      <span><li> Soporte ágil.</li></span>
-     <span><li> Seguridad y respaldo de datos</li></span>
-      <span><li> Optimización y mejoras continuas</li></span>
-      </ul>
-      </div>
-     
-   <div class="card-img">
-        <img src="Assets/img/Mantenimiento-web el mejor.webp" alt="Desarrollo">
-      </div>
-    </section>
-
-<!--<section class="card">
-      <div class="card-text">
-        <h2>Inteligencia Artificial</h2>
-        <p>Soluciones inteligentes para optimizar procesos y mejorar la productividad.</p>
-      </div>
-      <div class="card-img">
-        <img src="img/ai.png" alt="IA">
-      </div>
-    </section>--> 
-
-    <!--<section class="card">
-      <div class="card-text">
-        <h2>Desarrollo de Software</h2>
-        <p>Aplicaciones a medida con las últimas tecnologías.</p>
-      </div>
-      <div class="card-img">
-        <img src="img/dev.png" alt="Desarrollo">
-      </div>
-    </section>-->
-
- <section class="features-section">
-    <h2 id="proyectos">Proyectos desarrollados para pequeñas empresas y organizaciones civiles.</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <img src="Assets/img/Criadero para perros general rodriguez (2).png" alt="Preview">
-        <h3>Criadero para perros General rodriguez</h3>
-        <p>Proyecto web para un criadero de perros. Adopcion y cobertura, consejos de cuidado y crianza para perros de "raza American pitbull terrier y Bullodg Frances". Esta landing page presenta el Asesoramiento y cria responsable del espacio, permite visualizar los servicios, ubicación, y canales de contacto. 
-           El objetivo es brindar una imagen profesional y moderna del lugar.</p>
-        <button> <a href="https://criaderoparaperosgeneralrodriguez.netlify.app/" target="_blank">+</a></button>
-      </div>
-
-      <div class="feature-card">
-        <img src="Assets/img/Screenshot 2025-09-07 23-09-17.png" alt="Preview">
-        <h3>Salon de eventos las 2 banderas</h3>
-        <p>Proyecto web para una casa de eventos sociales y culturales privados llamada **Las 2 Banderas**. Esta landing page presenta la propuesta del espacio, permite visualizar los servicios, ubicación, y canales de contacto. El objetivo es brindar una imagen profesional y moderna del lugar.</p>
-         <button><a href="https://salon2banderaseventos.netlify.app/" target="_blank"> + </a></button>
-      </div>
-
-      <div class="feature-card">
-        <img src="Assets/img/Sociedad creativa.png" alt="Preview">
-        <h3>Asociacion civil Argentina Sociedad creativa</h3>
-        <p>El sitio web SociedadCreativa.online es la presencia digital de la asociación. Sirve para:
-
-          Informar sobre noticias ambientales y climáticas relevantes.
-
-          Difundir eventos, jornadas o actividades relacionadas con sostenibilidad, cultura, acción climática, vida humana, etc.
-
-          Contar la historia y fundamentos de la organización.
-
-          Facilitar que nuevas personas puedan unirse, contactar y participar.</p>
-      <button><a href="https://sociedadcreativa.online/" target="_blank">+</button></a>
-      </div>
-  </main>
-
-
-<div class="whatsapp-container">
-  <a href="https://wa.me/5491126027687" target="_blank">
-<img src="Assets/Icons/Logo_whatsapp11.png" class="whatsapp" alt="WhatsApp" width="80px" height="80px"></a>
-</div>
-
- 
-<!-- HTML: footer con logos sociales -->
-<footer class="site-footer">
-  <!-- Parte superior -->
-  <div class="footer-top">
+    <!-- HTML: footer con logos sociales -->
+    <footer class="site-footer">
+    <!-- Parte superior -->
+    <div class="footer-top">
     <div class="social-icons">
       <span>Sígueme:</span>
         
       <a href="https://github.com/Mgabrizuela017" target="_blank" rel="noopener noreferrer">
         <img src="Assets/Icons/icono_github.gif" alt="Git-hub / git_hub" style="border-radius: 100px;" class="social-icon">
       </a>
-
       <a href="https://www.linkedin.com/in/marcos-brizuela07/" target="_blank" rel="noopener noreferrer">
         <img src="Assets/Icons/linkedin.svg" alt="LinkedIn" class="social-icon">
       </a>
@@ -824,59 +767,23 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </footer>
 
-
-
-<!-- Script -->
-<script>
-  const btn = document.getElementById("btnCotizar");
-  const modal = document.getElementById("modalCotizacion");
-  const closeBtn = document.querySelector(".close");
-
-  btn.addEventListener("click", () => {
-    modal.style.display = "flex";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-</script>
-<script>
-  const btn2 = document.getElementById("btnCotizar");
-  const modal2 = document.getElementById("modalCotizacion");
-  const closeBtn2 = document.querySelector(".close");
-
-  btn.addEventListener("click", () => {
-    modal2.style.display = "flex";
-  });
-
-  closeBtn2.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal2) {
-      modal2.style.display = "none";
-    }
-  });
-</script>
-
- 
-
-  <!-- Iconos de redes (puedes usar fontawesome) -->
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-  <!-- Scripts -->
+<!-- ================= JS UNIFICADO ================= -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="script.js"></script>
-<script>const toggleBtn = document.getElementById("theme-toggle");
+  <script>
+    // Modal cotización
+const btn = document.getElementById("btnCotizar");
+const modal = document.getElementById("modalCotizacion");
+const closeBtn = document.querySelector(".close");
+
+btn.addEventListener("click", () => { modal.style.display = "flex"; });
+closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+window.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
+
+// Dark / Light mode con partículas
+const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Configuración partículas por tema
+// Configuración partículas
 const particlesDark = {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -884,19 +791,10 @@ const particlesDark = {
     shape: { type: "circle" },
     opacity: { value: 0.5 },
     size: { value: 3, random: true },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#4db8ff",
-      opacity: 0.4,
-      width: 1
-    },
+    line_linked: { enable: true, distance: 150, color: "#4db8ff", opacity: 0.4, width: 1 },
     move: { enable: true, speed: 3 }
   },
-  interactivity: {
-    events: { onhover: { enable: true, mode: "repulse" } },
-    modes: { repulse: { distance: 100 } }
-  },
+  interactivity: { events: { onhover: { enable: true, mode: "repulse" } }, modes: { repulse: { distance: 100 } } },
   retina_detect: true
 };
 
@@ -907,39 +805,28 @@ const particlesLight = {
     shape: { type: "circle" },
     opacity: { value: 0.5 },
     size: { value: 3, random: true },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#6a11cb",
-      opacity: 0.4,
-      width: 1
-    },
+    line_linked: { enable: true, distance: 150, color: "#6a11cb", opacity: 0.4, width: 1 },
     move: { enable: true, speed: 3 }
   },
-  interactivity: {
-    events: { onhover: { enable: true, mode: "repulse" } },
-    modes: { repulse: { distance: 100 } }
-  },
+  interactivity: { events: { onhover: { enable: true, mode: "repulse" } }, modes: { repulse: { distance: 100 } } },
   retina_detect: true
 };
 
-// Función para recargar partículas
+// Función para cargar partículas en #particles-js2
 function loadParticles(config) {
-  // Si ya existe un canvas, lo borro
   if (window.pJSDom && window.pJSDom.length > 0) {
     window.pJSDom[0].pJS.fn.vendors.destroypJS();
     window.pJSDom = [];
   }
-  particlesJS("particles-js", config);
+  particlesJS("particles-js2", config); // ID corregido
 }
 
-// Inicial: dark mode
+// Carga inicial (modo oscuro)
 loadParticles(particlesDark);
 
-// Toggle tema + partículas
+// Toggle Dark/Light
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("light");
-
   if (body.classList.contains("light")) {
     toggleBtn.textContent = "☀️";
     loadParticles(particlesLight);
@@ -948,39 +835,7 @@ toggleBtn.addEventListener("click", () => {
     loadParticles(particlesDark);
   }
 });
-</script>
-<script>
-  // Menú hamburguesa responsivo
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const navLinks = document.getElementById('navLinks');
 
-  hamburgerBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Cambiar icono del hamburguesa (opcional: de ☰ a ✕)
-    if (navLinks.classList.contains('active')) {
-      hamburgerBtn.textContent = '✕';
-    } else {
-      hamburgerBtn.textContent = '☰';
-    }
-  });
-
-  // Cerrar menú al hacer clic en un enlace (mejora UX en móviles)
-  const navA = navLinks.querySelectorAll('a');
-  navA.forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      hamburgerBtn.textContent = '☰';
-    });
-  });
-
-  // Cerrar menú al redimensionar ventana (si pasa de móvil a desktop)
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navLinks.classList.remove('active');
-      hamburgerBtn.textContent = '☰';
-    }
-  });
 </script>
 </body>
 </html>
