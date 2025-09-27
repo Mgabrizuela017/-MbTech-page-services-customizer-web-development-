@@ -383,7 +383,36 @@ body.dark-mode .site-footer a:hover {
 #toast {
   transition: all 0.5s ease;
 }
+.btn-Google {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+  transition: transform 0.2s ease;
+}
 
+.btn-Google:hover {
+  transform: scale(1.05);
+}
+
+.google-meet-icon {
+  width: 20px;
+  height: 20px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 </style>
 
 </head>
@@ -401,10 +430,32 @@ body.dark-mode .site-footer a:hover {
     </div>
   </div>
 
-  <div class="nav-right">
+ <div class="nav-right">
+    <button class="btn-Google" id="btn-Google2">
+  <img src="https://cdn.prod.website-files.com/6804774958514b6a49cf7b87/687c2721c4366c6c8996cb65_google-meet-icon-sm.png" viewBox="0 0 48 48" class="google-meet-icon">
+    <path fill="#00832D" d="M29 16V9c0-1.1-.9-2-2-2H9C7.9 7 7 7.9 7 9v30c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-7l10 10V6L29 16z"/>
+    <path fill="#34A853" d="M41 6v36l-12-12V16L41 6z"/>
+    <path fill="#FBBC04" d="M29 16l12-10v20l-12-10z"/>
+    <path fill="#EA4335" d="M29 32l12 10V22l-12 10z"/>
+  </svg>
+  <span>Agendar una llamada</span>
+</button>
+
     <button id="theme-toggle">🌙</button>
   </div>
 </nav>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btnGoogle = document.getElementById("btn-Google2");
+
+  if (btnGoogle) {
+    btnGoogle.addEventListener("click", () => {
+      const url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Reunión+con+MBTech&details=Videollamada+por+Google+Meet&location=https://meet.google.com/&dates=20250927T150000Z/20250927T160000Z&add=dev.brizuela07@gmail.com";
+      window.open(url, "_blank");
+    });
+  }
+});
+</script>
 
 
 <header class="hero">
